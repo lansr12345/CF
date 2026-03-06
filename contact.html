@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - Car World | تواصل مع فريقنا</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        /* ===== RESET & GLOBAL ===== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* ===== DARK/LIGHT MODE VARIABLES ===== */
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --primary-light: #3d8bfd;
+            --primary-glow: rgba(13, 110, 253, 0.6);
+            --dark: #0a0a0a;
+            --dark-light: #1a1a1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.05);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
+            /* الوضع الليلي (الافتراضي) */
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-card: rgba(255, 255, 255, 0.02);
+            --text-primary: #f8f9fa;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.5);
+            --border-color: rgba(255, 255, 255, 0.05);
+            --border-hover: rgba(13, 110, 253, 0.3);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --header-bg: rgba(10, 10, 10, 0.95);
+            --input-bg: rgba(255, 255, 255, 0.05);
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --footer-bg: var(--dark-light);
+            --hero-overlay: rgba(0, 0, 0, 0.6);
+        }
+
+        /* الوضع النهاري */
+        [data-theme="light"] {
+            --bg-primary: #f0f2f5;
+            --bg-secondary: #ffffff;
+            --bg-card: rgba(255, 255, 255, 0.9);
+            --text-primary: #1a1a1a;
+            --text-secondary: rgba(0, 0, 0, 0.7);
+            --text-muted: rgba(0, 0, 0, 0.5);
+            --border-color: rgba(0, 0, 0, 0.1);
+            --border-hover: rgba(13, 110, 253, 0.3);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --input-bg: rgba(0, 0, 0, 0.02);
+            --card-bg: #ffffff;
+            --footer-bg: #e8e8e8;
+            --hero-overlay: rgba(255, 255, 255, 0.1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            direction: rtl;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        /* ===== HEADER ===== */
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: var(--header-bg);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(13, 110, 253, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-btn {
+            padding: 10px 24px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .nav-btn:hover::before {
+            left: 100%;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(13, 110, 253, 0.3);
+            transform: translateY(-2px);
+            color: var(--text-primary);
+        }
+        
+        .nav-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 0 30px var(--primary-glow);
+            color: white;
+        }
+        /* ===== HERO SECTION ===== */
+        
+        .contact-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 180px 60px 100px;
+            overflow: hidden;
+            background: var(--bg-primary);
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(13, 110, 253, 0.1);
+            border: 1px solid rgba(13, 110, 253, 0.3);
+            border-radius: 50px;
+            color: var(--primary-light);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-title {
+            font-size: clamp(40px, 8vw, 80px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+            color: var(--text-primary);
+        }
+        
+        .hero-title span {
+            background: linear-gradient(135deg, #fff, var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: block;
+        }
+        
+        .hero-description {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* ===== CONTACT INFO SECTION ===== */
+        
+        .contact-info-section {
+            padding: 100px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 50px 30px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .contact-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--border-hover);
+            box-shadow: 0 30px 60px var(--shadow-color);
+        }
+        
+        .contact-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            border: 1px solid rgba(13, 110, 253, 0.3);
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover .contact-icon {
+            transform: scale(1.1);
+            background: var(--primary);
+        }
+        
+        .contact-card:hover .contact-icon i {
+            color: white;
+        }
+        
+        .contact-icon i {
+            font-size: 48px;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .contact-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .contact-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .contact-card .detail {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 15px;
+        }
+        /* ===== FORM SECTION ===== */
+        
+        .form-section {
+            padding: 100px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .form-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .form-header h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .form-header p {
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+        
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 40px;
+            padding: 60px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 18px 25px;
+            background: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: var(--text-primary);
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+            background: var(--card-bg);
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px var(--primary-glow);
+        }
+        
+        .submit-btn i {
+            margin-left: 10px;
+        }
+        /* ===== MAP SECTION ===== */
+        
+        .map-section {
+            padding: 100px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .map-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .map-wrapper {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 40px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .map-placeholder {
+            height: 500px;
+            background: linear-gradient(135deg, var(--dark-light), #000);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .map-placeholder:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(13, 110, 253, 0.2);
+        }
+        
+        .map-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .map-content i {
+            font-size: 80px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px var(--primary-glow));
+            animation: mapMarker 2s infinite;
+        }
+        
+        @keyframes mapMarker {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .map-content h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .map-content p {
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+        /* ===== SOCIAL SECTION ===== */
+        
+        .social-section {
+            padding: 80px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .social-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .social-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .social-subtitle {
+            color: var(--text-secondary);
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+        
+        .social-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .social-item {
+            width: 100px;
+            height: 100px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .social-item:hover::before {
+            opacity: 1;
+        }
+        
+        .social-item:hover {
+            transform: translateY(-10px) scale(1.1);
+            border-color: transparent;
+        }
+        
+        .social-item i {
+            font-size: 40px;
+            color: var(--primary);
+            position: relative;
+            z-index: 2;
+            transition: var(--transition);
+        }
+        
+        .social-item:hover i {
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .social-item.whatsapp i {
+            color: #25d366;
+        }
+        
+        .social-item.telegram i {
+            color: #0088cc;
+        }
+        
+        .social-item.facebook i {
+            color: #1877f2;
+        }
+        
+        .social-item.twitter i {
+            color: #1da1f2;
+        }
+        
+        .social-item.instagram i {
+            color: #e4405f;
+        }
+        /* ===== FAQ SECTION ===== */
+        
+        .faq-preview {
+            padding: 100px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .faq-preview-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .faq-preview-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .faq-preview-header h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .faq-preview-header p {
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+        
+        .faq-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .faq-preview-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 40px;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .faq-preview-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--border-hover);
+            box-shadow: 0 30px 60px var(--shadow-color);
+        }
+        
+        .faq-preview-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .faq-preview-card p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        .faq-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .faq-link i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-preview-card:hover .faq-link i {
+            transform: translateX(5px);
+        }
+        /* ===== BUSINESS HOURS ===== */
+        
+        .hours-section {
+            padding: 80px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .hours-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hours-content h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .hours-content p {
+            color: var(--text-secondary);
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .hours-list {
+            list-style: none;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-list .day {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .hours-list .time {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .hours-badge {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .hours-badge i {
+            font-size: 60px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .hours-badge h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .hours-badge p {
+            color: var(--text-secondary);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .hours-badge .emergency {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 20px;
+        }
+        /* ===== NOTIFICATION ===== */
+        
+        .notification {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 9999;
+            box-shadow: 0 20px 40px var(--shadow-color);
+            animation: slideDown 0.5s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+        
+        .notification i {
+            font-size: 24px;
+        }
+        
+        .notification.success i {
+            color: #28a745;
+        }
+        
+        .notification.error i {
+            color: #dc3545;
+        }
+        
+        .notification span {
+            color: var(--text-primary);
+        }
+        /* ===== FOOTER ===== */
+        
+        .footer {
+            background: var(--footer-bg);
+            padding: 80px 60px 30px;
+            border-top: 1px solid rgba(13, 110, 253, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-section h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: var(--text-primary);
+        }
+        
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+            display: inline-block;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            width: 45px;
+            height: 45px;
+            background: var(--input-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+        }
+        
+        .footer-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            border-color: transparent;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        /* ===== RESPONSIVE ===== */
+        
+        @media (max-width: 1200px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hours-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 30px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .contact-form {
+                padding: 30px;
+            }
+            .faq-preview-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-title {
+                font-size: 40px;
+            }
+        }
+
+        /* تنسيقات خاصة للوضع النهاري */
+        [data-theme="light"] .hero-title span,
+        [data-theme="light"] .logo {
+            background: linear-gradient(135deg, #1a1a1a, var(--primary)) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+        }
+
+        [data-theme="light"] .map-placeholder {
+            background: linear-gradient(135deg, #e0e0e0, #f0f0f0) !important;
+        }
+
+        [data-theme="light"] .nav-btn.active {
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="logo">CAR WORLD</h2>
+        <nav class="nav">
+            <a href="index.html" class="nav-btn">الرئيسية</a>
+            <a href="cars.html" class="nav-btn">السيارات</a>
+            <a href="stats.html" class="nav-btn">إحصائيات</a>
+            <a href="about.html" class="nav-btn">من نحن</a>
+            <a href="contact.html" class="nav-btn active">اتصال</a>
+            <a href="faq.html" class="nav-btn">FAQ</a>
+            <a href="terms.html" class="nav-btn">الشروط</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="contact-hero">
+            <div class="hero-content">
+                <div class="hero-badge">✦ تواصل معنا ✦</div>
+                <h1 class="hero-title">
+                    نحن هنا<br>
+                    <span>لخدمتك</span>
+                </h1>
+                <p class="hero-description">
+                    فريقنا من الخبراء جاهز للإجابة على جميع استفساراتك ومساعدتك في أي وقت. تواصل معنا بأي من الطرق التالية وسنكون سعداء بخدمتك.
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTACT INFO SECTION -->
+        <section class="contact-info-section">
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>العنوان الرئيسي</h3>
+                        <p>القاهرة الجديدة، التجمع الخامس</p>
+                        <p class="detail">شارع التسعين، بناية 124</p>
+                        <p style="margin-top: 15px;">الطابق 12، مكتب 1205</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>اتصل بنا</h3>
+                        <p>المبيعات والدعم الفني</p>
+                        <p class="detail">01033139027</p>
+                        <p class="detail">0223456789</p>
+                        <p style="margin-top: 15px;">متاحون 24/7 للطوارئ</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>للاستفسارات العامة</p>
+                        <p class="detail">info@carworld.com</p>
+                        <p>للدعم الفني</p>
+                        <p class="detail">support@carworld.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM SECTION -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>أرسل لنا رسالة</h2>
+                    <p>نحن نرد على جميع الاستفسارات خلال 24 ساعة كحد أقصى</p>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>الاسم الأول</label>
+                                <input type="text" placeholder="أحمد" required>
+                            </div>
+                            <div class="form-group">
+                                <label>الاسم الأخير</label>
+                                <input type="text" placeholder="محمد" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>البريد الإلكتروني</label>
+                                <input type="email" placeholder="ahmed@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>رقم الهاتف</label>
+                                <input type="tel" placeholder="010xxxxxxxx" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>نوع الاستفسار</label>
+                            <select required>
+                                <option value="" disabled selected>اختر نوع الاستفسار</option>
+                                <option value="sales">استفسار عن سيارة</option>
+                                <option value="support">دعم فني</option>
+                                <option value="partnership">شراكة تجارية</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الموضوع</label>
+                            <input type="text" placeholder="اكتب موضوع رسالتك" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الرسالة</label>
+                            <textarea placeholder="اكتب رسالتك بالتفصيل..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP SECTION -->
+        <section class="map-section">
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <div class="map-placeholder" onclick="window.open('https://maps.google.com/?q=30.0444,31.2357')">
+                        <div class="map-content">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>القاهرة الجديدة، مصر</h3>
+                            <p>اضغط لعرض الموقع على خرائط جوجل</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL SECTION -->
+        <section class="social-section">
+            <div class="social-container">
+                <h2 class="social-title">تواصل معنا عبر</h2>
+                <p class="social-subtitle">اختر القناة المفضلة للتواصل السريع</p>
+
+                <div class="social-grid">
+                    <a href="https://wa.me/201033139027" class="social-item whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/01033139027" class="social-item telegram" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://facebook.com" class="social-item facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" class="social-item twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" class="social-item instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUSINESS HOURS -->
+        <section class="hours-section">
+            <div class="hours-container">
+                <div class="hours-content">
+                    <h2>ساعات العمل</h2>
+                    <p>فريقنا متاح لخدمتك في الأوقات التالية. للاستفسارات العاجلة، يمكنك التواصل عبر الواتساب على مدار الساعة.</p>
+
+                    <ul class="hours-list">
+                        <li><span class="day">السبت - الخميس</span><span class="time">9:00 صباحاً - 9:00 مساءً</span></li>
+                        <li><span class="day">الجمعة</span><span class="time">مغلق (طوارئ فقط)</span></li>
+                        <li><span class="day">العطلات الرسمية</span><span class="time">11:00 صباحاً - 5:00 مساءً</span></li>
+                    </ul>
+                </div>
+
+                <div class="hours-badge">
+                    <i class="fas fa-clock"></i>
+                    <h3>دعم الطوارئ</h3>
+                    <p>للاستفسارات العاجلة خارج أوقات العمل الرسمية</p>
+                    <p class="emergency">📞 01033139027</p>
+                    <p class="emergency" style="font-size: 16px;">متاح 24/7</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ PREVIEW -->
+        <section class="faq-preview">
+            <div class="faq-preview-container">
+                <div class="faq-preview-header">
+                    <h2>أسئلة شائعة</h2>
+                    <p>ربما تجد إجابة سؤالك هنا</p>
+                </div>
+
+                <div class="faq-preview-grid">
+                    <a href="faq.html#payment" class="faq-preview-card">
+                        <h3>طرق الدفع المتاحة</h3>
+                        <p>نقدم خيارات دفع مرنة تناسب الجميع: نقدي، تقسيط، بطاقات ائتمان، وتحويل بنكي.</p>
+                        <span class="faq-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                    </a>
+
+                    <a href="faq.html#warranty" class="faq-preview-card">
+                        <h3>الضمان والصيانة</h3>
+                        <p>جميع السيارات الجديدة تأتي مع ضمان الوكالة. السيارات المستعملة تخضع لفحص شامل ولها ضمان لمدة عام.</p>
+                        <span class="faq-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                    </a>
+
+                    <a href="faq.html#shipping" class="faq-preview-card">
+                        <h3>الشحن والتوصيل</h3>
+                        <p>نوفر خدمة التوصيل حتى باب المنزل في جميع محافظات مصر بأسعار رمزية.</p>
+                        <span class="faq-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                    </a>
+
+                    <a href="faq.html#test-drive" class="faq-preview-card">
+                        <h3>تجربة القيادة</h3>
+                        <p>يمكنك حجز موعد لتجربة قيادة أي سيارة في مقرنا بالقاهرة الجديدة.</p>
+                        <span class="faq-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- NOTIFICATION -->
+    <div id="notification" class="notification" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationMessage"></span>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CAR WORLD</h3>
+                <p>منصة رقمية متكاملة لبيع وشراء السيارات. نستخدم التكنولوجيا لنقدم لك تجربة استثنائية.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="terms.html">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <ul>
+                    <li>📍 القاهرة الجديدة، مصر</li>
+                    <li>📞 01033139027</li>
+                    <li>✉️ hello@carworld.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CAR WORLD - مشروع تخرج | جميع الحقوق محفوظة. تصميم وتطوير فريق المبدعين الستة ✦</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission with notification
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const notification = document.getElementById('notification');
+            const messageSpan = document.getElementById('notificationMessage');
+
+            // Show success notification
+            notification.style.display = 'flex';
+            notification.className = 'notification success';
+            messageSpan.textContent = '✅ تم إرسال الرسالة بنجاح! سنتواصل معك خلال 24 ساعة.';
+
+            // Reset form
+            this.reset();
+
+            // Hide notification after 5 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+        });
+
+        // Input animations
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+
+</html>
