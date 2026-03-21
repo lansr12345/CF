@@ -1,0 +1,1231 @@
+/* ========== RESPONSIVE DESIGN - CAR WORLD ========== */
+
+
+/* هذا الملف مخصص لجعل الموقع متجاوباً مع جميع الشاشات */
+
+
+/* ===== للأجهزة اللوحية والهواتف الكبيرة (عرض أقل من 1200px) ===== */
+
+@media (max-width: 1200px) {
+    .features-grid,
+    .cars-preview-grid,
+    .team-grid,
+    .values-grid,
+    .countries-grid,
+    .insights-grid,
+    .contact-grid,
+    .faq-preview-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        padding: 0 20px;
+    }
+    .stats-grid,
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    .footer-content {
+        gap: 40px !important;
+        padding: 0 30px;
+    }
+}
+
+
+/* ===== للأجهزة اللوحية المتوسطة (عرض أقل من 992px) ===== */
+
+@media (max-width: 992px) {
+    .story-container {
+        grid-template-columns: 1fr !important;
+        gap: 60px !important;
+        padding: 0 30px;
+    }
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .specs-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .hours-container {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+        padding: 0 30px;
+    }
+    .mission-grid {
+        grid-template-columns: 1fr !important;
+        padding: 0 30px;
+    }
+    .years-grid {
+        grid-template-columns: 1fr !important;
+        padding: 0 30px;
+    }
+}
+
+
+/* ===== للهواتف المحمولة (عرض أقل من 768px) ===== */
+
+@media (max-width: 768px) {
+    /* ===== BASE ===== */
+    body {
+        font-size: 14px;
+    }
+    /* ===== HEADER ===== */
+    .header {
+        flex-direction: column !important;
+        padding: 10px 15px !important;
+        position: relative !important;
+        height: auto !important;
+    }
+    .logo {
+        font-size: 24px !important;
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100%;
+    }
+    .nav-btn {
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+        flex: 0 1 auto;
+    }
+    .theme-toggle {
+        margin: 10px 0 !important;
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .theme-toggle i {
+        font-size: 16px !important;
+    }
+    /* ===== HERO SECTIONS ===== */
+    .hero,
+    .about-hero,
+    .contact-hero,
+    .faq-hero,
+    .stats-hero,
+    .terms-hero {
+        padding: 120px 15px 60px !important;
+        min-height: auto !important;
+    }
+    .hero {
+        background-attachment: scroll !important;
+    }
+    .hero-title {
+        font-size: 32px !important;
+    }
+    .hero-description {
+        font-size: 16px !important;
+        padding: 0 10px;
+    }
+    .hero-stats {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    .stat-item {
+        width: 100%;
+        text-align: center;
+    }
+    .stat-number {
+        font-size: 36px !important;
+    }
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+        margin-bottom: 40px !important;
+        padding: 0 15px;
+    }
+    .section-header h2 {
+        font-size: 28px !important;
+    }
+    .section-header p {
+        font-size: 16px !important;
+    }
+    /* ===== GRIDS ===== */
+    .features-grid,
+    .cars-preview-grid,
+    .team-grid,
+    .values-grid,
+    .countries-grid,
+    .insights-grid,
+    .contact-grid,
+    .faq-preview-grid,
+    .stats-grid,
+    .achievements-grid,
+    .years-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 0 15px;
+    }
+    .cars-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 0 15px;
+    }
+    /* ===== CARDS ===== */
+    .feature-card,
+    .value-card,
+    .team-card,
+    .country-card,
+    .insight-card,
+    .contact-card,
+    .faq-preview-card,
+    .stat-card,
+    .achievement-item,
+    .mission-card,
+    .vision-card,
+    .terms-grid-item {
+        padding: 30px 20px !important;
+    }
+    .car-card {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+    .car-card-image {
+        height: 160px !important;
+    }
+    .car-card-actions {
+        top: 5px !important;
+        left: 5px !important;
+    }
+    .action-btn {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 14px !important;
+    }
+    .badge {
+        top: 20px !important;
+        right: 20px !important;
+        padding: 4px 12px !important;
+        font-size: 10px !important;
+    }
+    .buy-btn {
+        padding: 8px !important;
+        font-size: 13px !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+    /* ===== ICONS ===== */
+    .feature-icon,
+    .value-icon,
+    .contact-icon,
+    .card-icon,
+    .stat-icon,
+    .insight-icon,
+    .section-icon {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 20px !important;
+    }
+    .feature-icon i,
+    .value-icon i,
+    .contact-icon i,
+    .card-icon i,
+    .stat-icon i,
+    .insight-icon i,
+    .section-icon i {
+        font-size: 28px !important;
+    }
+    /* ===== FILTERS ===== */
+    .filters-container {
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 0 15px;
+    }
+    .filter-group {
+        width: 100% !important;
+        min-width: auto !important;
+        padding: 20px !important;
+    }
+    .filter-group h3 {
+        font-size: 16px !important;
+    }
+    .radio-group {
+        flex-wrap: wrap;
+    }
+    .radio-group label {
+        padding: 8px 15px !important;
+        font-size: 13px !important;
+    }
+    .search-box {
+        flex-direction: column !important;
+        background: transparent !important;
+        gap: 10px !important;
+        padding: 0 15px;
+    }
+    .search-box input {
+        width: 100% !important;
+        padding: 15px !important;
+        background: var(--input-bg) !important;
+        border-radius: 50px !important;
+    }
+    .search-box button {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+    .price-filter {
+        padding: 20px !important;
+        margin: 0 15px;
+    }
+    .price-inputs {
+        flex-direction: column !important;
+    }
+    .price-inputs input,
+    .price-inputs button {
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+    .price-inputs span {
+        display: none !important;
+    }
+    .results-header {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+        padding: 15px !important;
+        margin: 20px 15px !important;
+    }
+    /* ===== ACCORDION ===== */
+    .accordion-content {
+        padding: 10px !important;
+    }
+    .accordion-content.open {
+        padding: 15px !important;
+    }
+    .accordion-header {
+        padding: 15px !important;
+        font-size: 16px !important;
+    }
+    /* ===== CAR DETAILS ===== */
+    .car-details {
+        padding: 120px 15px 40px !important;
+    }
+    .car-details-container {
+        padding: 20px !important;
+    }
+    .car-details-container h1 {
+        font-size: 24px !important;
+    }
+    .car-details-container h2 {
+        font-size: 22px !important;
+        margin: 30px 0 20px !important;
+    }
+    .info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin: 20px 0 !important;
+    }
+    .info-card {
+        padding: 15px !important;
+    }
+    .info-card i {
+        font-size: 24px !important;
+    }
+    .info-card h3 {
+        font-size: 14px !important;
+    }
+    .info-card p {
+        font-size: 16px !important;
+    }
+    .description-text {
+        padding: 20px !important;
+        font-size: 14px !important;
+    }
+    .specs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    .spec-item {
+        padding: 12px !important;
+    }
+    .spec-item i {
+        font-size: 20px !important;
+    }
+    .payment-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    .payment-card {
+        padding: 20px !important;
+    }
+    .car-actions {
+        flex-direction: column !important;
+    }
+    .action-large-btn {
+        width: 100% !important;
+        min-width: auto !important;
+        padding: 12px !important;
+    }
+    .contact-buttons {
+        flex-direction: column !important;
+    }
+    .contact-btn {
+        width: 100% !important;
+        min-width: auto !important;
+        padding: 12px !important;
+    }
+    /* ===== STORY SECTION ===== */
+    .story-section {
+        padding: 60px 15px !important;
+    }
+    .story-title {
+        font-size: 28px !important;
+    }
+    .story-text {
+        font-size: 14px !important;
+    }
+    .story-highlight {
+        padding: 20px !important;
+    }
+    .story-highlight p {
+        font-size: 16px !important;
+    }
+    .image-badge {
+        bottom: -15px !important;
+        left: 15px !important;
+        padding: 10px !important;
+    }
+    .image-badge span {
+        font-size: 24px !important;
+    }
+    /* ===== FAQ ===== */
+    .faq-section {
+        padding: 40px 15px !important;
+    }
+    .faq-question {
+        padding: 20px !important;
+    }
+    .faq-question h3 {
+        font-size: 14px !important;
+        line-height: 1.4;
+    }
+    .faq-answer p {
+        padding: 0 20px 20px !important;
+        font-size: 13px !important;
+    }
+    .categories-section {
+        padding: 20px 15px !important;
+    }
+    .category-btn {
+        padding: 10px 15px !important;
+        font-size: 13px !important;
+        flex: 1 1 auto;
+    }
+    .search-section {
+        padding: 30px 15px 20px !important;
+    }
+    /* ===== TERMS ===== */
+    .terms-content {
+        padding: 60px 15px !important;
+    }
+    .terms-section {
+        padding: 25px !important;
+        margin-bottom: 30px !important;
+    }
+    .terms-section-header {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 10px !important;
+    }
+    .terms-section-header h2 {
+        font-size: 22px !important;
+    }
+    .terms-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    .terms-list li {
+        font-size: 13px !important;
+        padding-right: 20px !important;
+    }
+    .last-updated {
+        padding: 25px !important;
+    }
+    /* ===== CONTACT ===== */
+    .map-section {
+        padding: 40px 15px !important;
+    }
+    .map-wrapper {
+        padding: 15px !important;
+    }
+    .map-placeholder {
+        height: 300px !important;
+    }
+    .map-content i {
+        font-size: 50px !important;
+    }
+    .map-content h3 {
+        font-size: 24px !important;
+    }
+    .map-content p {
+        font-size: 14px !important;
+    }
+    .social-section {
+        padding: 40px 15px !important;
+    }
+    .social-title {
+        font-size: 28px !important;
+    }
+    .social-subtitle {
+        font-size: 16px !important;
+        margin-bottom: 30px !important;
+    }
+    .social-grid {
+        gap: 15px !important;
+    }
+    .social-item {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .social-item i {
+        font-size: 24px !important;
+    }
+    .hours-section {
+        padding: 40px 15px !important;
+    }
+    .hours-content h2 {
+        font-size: 28px !important;
+    }
+    .hours-content p {
+        font-size: 16px !important;
+    }
+    .hours-list li {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 5px !important;
+    }
+    .hours-badge {
+        padding: 30px !important;
+    }
+    .hours-badge i {
+        font-size: 40px !important;
+    }
+    .hours-badge h3 {
+        font-size: 22px !important;
+    }
+    .hours-badge p {
+        font-size: 16px !important;
+    }
+    .hours-badge .emergency {
+        font-size: 18px !important;
+    }
+    /* ===== FORMS ===== */
+    .form-section {
+        padding: 40px 15px !important;
+    }
+    .form-header h2 {
+        font-size: 28px !important;
+    }
+    .form-header p {
+        font-size: 16px !important;
+    }
+    .contact-form {
+        padding: 25px !important;
+    }
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+    .form-group {
+        margin-bottom: 20px !important;
+    }
+    .form-group label {
+        font-size: 14px !important;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 14px 18px !important;
+        font-size: 14px !important;
+    }
+    .submit-btn {
+        padding: 15px !important;
+        font-size: 16px !important;
+    }
+    /* ===== LOGIN & PROFILE ===== */
+    .login-section {
+        padding: 120px 15px 40px !important;
+    }
+    .login-container {
+        padding: 25px !important;
+    }
+    .login-header i {
+        width: 70px !important;
+        height: 70px !important;
+        font-size: 30px !important;
+        line-height: 70px !important;
+    }
+    .login-header h1 {
+        font-size: 24px !important;
+    }
+    .login-header p {
+        font-size: 14px !important;
+    }
+    .login-tabs {
+        flex-direction: column !important;
+        gap: 5px !important;
+    }
+    .tab-btn {
+        width: 100% !important;
+        padding: 12px !important;
+    }
+    .form-group input {
+        padding: 12px 15px !important;
+    }
+    .admin-note {
+        padding: 15px !important;
+    }
+    .profile-section {
+        padding: 120px 15px 40px !important;
+    }
+    .profile-header {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 15px !important;
+        padding: 0 15px;
+    }
+    .user-info {
+        width: 100% !important;
+        flex-direction: column !important;
+        text-align: center;
+        padding: 20px !important;
+    }
+    .user-avatar {
+        margin: 0 auto 10px;
+    }
+    .user-details h2 {
+        font-size: 20px !important;
+    }
+    .stats-cards {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    .stat-small-card {
+        width: 100% !important;
+        padding: 12px !important;
+    }
+    .logout-btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .tabs-container {
+        padding: 0 15px;
+    }
+    .profile-tabs {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+    .tab-btn {
+        width: 100% !important;
+        text-align: center;
+    }
+    .remove-btn {
+        top: 20px !important;
+        left: 20px !important;
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .empty-state {
+        padding: 40px 20px !important;
+    }
+    .empty-state i {
+        font-size: 60px !important;
+    }
+    .empty-state h3 {
+        font-size: 20px !important;
+    }
+    .empty-state p {
+        font-size: 14px !important;
+    }
+    .empty-state .btn {
+        padding: 12px 25px !important;
+        font-size: 14px !important;
+    }
+    .compare-table {
+        overflow-x: auto !important;
+        display: block !important;
+        margin: 0 15px;
+    }
+    .compare-table table {
+        min-width: 800px !important;
+    }
+    .compare-table th,
+    .compare-table td {
+        padding: 12px !important;
+        font-size: 13px !important;
+    }
+    /* ===== STATS ===== */
+    .stats-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 0 15px;
+    }
+    .stat-badge {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .brands-chart {
+        padding: 20px !important;
+        margin: 0 15px;
+        overflow-x: auto;
+    }
+    .brand-item {
+        min-width: 300px;
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 10px !important;
+    }
+    .brand-name {
+        min-width: auto !important;
+    }
+    .brand-bar-container {
+        width: 100% !important;
+    }
+    .brand-count {
+        min-width: auto !important;
+        text-align: center !important;
+    }
+    .stats-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin: 0 15px;
+    }
+    .stats-table th,
+    .stats-table td {
+        padding: 12px !important;
+        font-size: 13px !important;
+    }
+    /* ===== CTA ===== */
+    .cta-section {
+        padding: 60px 15px !important;
+    }
+    .cta-container {
+        padding: 30px 20px !important;
+    }
+    .cta-container h2 {
+        font-size: 24px !important;
+    }
+    .cta-container p {
+        font-size: 16px !important;
+    }
+    .cta-buttons {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    .cta-btn {
+        width: 100% !important;
+        padding: 14px !important;
+        justify-content: center !important;
+    }
+    /* ===== FOOTER ===== */
+    .footer {
+        padding: 40px 15px 20px !important;
+    }
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .footer-section h3 {
+        font-size: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    .footer-section p {
+        font-size: 14px !important;
+    }
+    .footer-social {
+        justify-content: center !important;
+    }
+    .footer-section ul {
+        padding: 0;
+    }
+    .footer-section ul li a:hover {
+        transform: none !important;
+    }
+    .footer-bottom p {
+        font-size: 12px !important;
+    }
+    /* ===== NOTIFICATION ===== */
+    .notification {
+        width: 90% !important;
+        padding: 15px 20px !important;
+        font-size: 14px !important;
+        top: 70px !important;
+    }
+    /* ===== TEAM ===== */
+    .team-image {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    .team-image-inner i {
+        font-size: 40px !important;
+    }
+    .team-card h3 {
+        font-size: 20px !important;
+    }
+    .team-position {
+        font-size: 14px !important;
+    }
+    .team-bio {
+        font-size: 13px !important;
+    }
+    .team-social a {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    /* ===== UTILITY CLASSES ===== */
+    .hide-on-mobile {
+        display: none !important;
+    }
+    .text-center-mobile {
+        text-align: center !important;
+    }
+    .full-width-mobile {
+        width: 100% !important;
+    }
+    /* ===== ACCORDION ANIMATION ===== */
+    .accordion-content {
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+    }
+    .accordion-content.open {
+        max-height: 2000px;
+        transition: max-height 0.5s ease-in;
+    }
+    /* ===== IMAGES ===== */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    /* ===== TEXT ===== */
+    p,
+    .description-text,
+    .story-text,
+    .terms-section p {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    /* ===== HEADER FIXED ISSUE ===== */
+    .header {
+        position: fixed !important;
+        transform: translateY(0) !important;
+    }
+    /* ===== SCROLLING IMPROVEMENTS ===== */
+    .accordion-content,
+    .brands-chart,
+    .compare-table,
+    .stats-table {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+/* ===== للأجهزة الصغيرة جداً (عرض أقل من 400px) ===== */
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 26px !important;
+    }
+    .section-title {
+        font-size: 24px !important;
+    }
+    .nav-btn {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+    }
+    .filter-group h3 {
+        font-size: 15px !important;
+    }
+    .radio-group label {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+    }
+    .car-card h3 {
+        font-size: 16px !important;
+    }
+    .car-price {
+        font-size: 14px !important;
+    }
+    .car-year {
+        font-size: 12px !important;
+    }
+    .cta-container h2 {
+        font-size: 20px !important;
+    }
+    .cta-container p {
+        font-size: 14px !important;
+    }
+    .login-header h1 {
+        font-size: 20px !important;
+    }
+    .profile-header h2 {
+        font-size: 18px !important;
+    }
+    .stat-number {
+        font-size: 30px !important;
+    }
+    .stat-label {
+        font-size: 12px !important;
+    }
+    .footer-bottom p {
+        font-size: 11px !important;
+    }
+}
+
+
+/* ===== للأجهزة اللوحية الأفقية (عرض بين 769px و 1024px) ===== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .features-grid,
+    .cars-preview-grid,
+    .team-grid,
+    .values-grid,
+    .countries-grid,
+    .insights-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        padding: 0 30px;
+    }
+    .header {
+        padding: 15px 30px !important;
+    }
+    .nav {
+        gap: 10px !important;
+    }
+    .nav-btn {
+        padding: 8px 16px !important;
+        font-size: 14px !important;
+    }
+    .hero-title {
+        font-size: 48px !important;
+    }
+    .hero-description {
+        font-size: 18px !important;
+    }
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        padding: 0 30px;
+    }
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr !important;
+        gap: 40px !important;
+        padding: 0 30px;
+    }
+}
+
+
+/* ===== للشاشات الكبيرة (عرض أكثر من 1400px) ===== */
+
+@media (min-width: 1400px) {
+    .features-grid,
+    .cars-preview-grid,
+    .team-grid,
+    .values-grid,
+    .countries-grid,
+    .insights-grid,
+    .cars-grid {
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
+    .hero-content,
+    .story-container,
+    .contact-container,
+    .faq-container,
+    .terms-container {
+        max-width: 1600px !important;
+    }
+}
+
+
+/* ===== للطباعة ===== */
+
+@media print {
+    .header,
+    .footer,
+    .theme-toggle,
+    .buy-btn,
+    .action-btn,
+    .contact-buttons,
+    .hero-btn,
+    .cta-btn,
+    .notification,
+    .nav,
+    .login-btn,
+    .logout-btn,
+    .search-box,
+    .filters-container,
+    .price-filter,
+    .categories-section,
+    .contact-cta,
+    .social-section,
+    .map-section {
+        display: none !important;
+    }
+    body {
+        background: white !important;
+        color: black !important;
+        padding: 20px !important;
+    }
+    .car-details-container,
+    .profile-section,
+    .terms-section,
+    .faq-item,
+    .story-section {
+        background: white !important;
+        color: black !important;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+    }
+    h1,
+    h2,
+    h3,
+    p {
+        color: black !important;
+    }
+    a {
+        text-decoration: none !important;
+        color: black !important;
+    }
+    img {
+        max-width: 500px !important;
+        page-break-inside: avoid;
+    }
+    @page {
+        margin: 2cm;
+    }
+}
+
+
+/* ===== تحسينات إضافية ===== */
+
+
+/* منع ظهور شريط التمرير الأفقي */
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+/* تحسين التمرير */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* تحسين الأزرار على الهاتف */
+
+button,
+.nav-btn,
+.cta-btn,
+.hero-btn,
+.buy-btn,
+.action-btn,
+.category-btn,
+.tab-btn,
+.submit-btn,
+.logout-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+
+/* تحسين القوائم المنسدلة */
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230d6efd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    padding-left: 40px !important;
+}
+
+
+/* تحسين حقول الإدخال */
+
+input,
+textarea,
+select {
+    font-size: 16px !important;
+    /* لمنع التكبير التلقائي على iOS */
+}
+
+
+/* تحسين الصور */
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* تحسين التمرير السلس */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* تحسين عرض البطاقات */
+
+.feature-card,
+.value-card,
+.team-card,
+.country-card,
+.insight-card,
+.contact-card,
+.faq-preview-card,
+.stat-card,
+.achievement-item,
+.car-card {
+    transition: all 0.3s ease;
+}
+
+
+/* تحسين الظهور عند التمرير */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========== تكبير الكارت النهائي ========== */
+
+
+/* تكبير بطاقة السيارة في صفحة السيارات */
+
+.car-card:hover {
+    transform: scale(1.15) !important;
+    /* تكبير 15% */
+    transition: all 0.4s ease !important;
+    z-index: 1000 !important;
+}
+
+
+/* تكبير بطاقة السيارة في الصفحة الرئيسية */
+
+.car-preview-card:hover {
+    transform: scale(1.15) !important;
+    /* تكبير 15% */
+    transition: all 0.4s ease !important;
+    z-index: 1000 !important;
+}
+
+
+/* تكبير بطاقات المميزات */
+
+.feature-card:hover {
+    transform: scale(1.12) !important;
+    /* تكبير 12% */
+    transition: all 0.4s ease !important;
+}
+
+
+/* تكبير بطاقات الفريق */
+
+.team-card:hover {
+    transform: scale(1.12) !important;
+    transition: all 0.4s ease !important;
+}
+
+
+/* تكبير بطاقات القيم */
+
+.value-card:hover {
+    transform: scale(1.12) !important;
+    transition: all 0.4s ease !important;
+}
+
+
+/* تكبير البطاقات في الأكورديون */
+
+.accordion-content .car-card:hover {
+    transform: scale(1.12) !important;
+    /* تكبير 12% */
+    transition: all 0.4s ease !important;
+}
+
+
+/* إضافة ظل قوي عند التكبير */
+
+.car-card:hover,
+.car-preview-card:hover,
+.feature-card:hover,
+.team-card:hover,
+.value-card:hover,
+.accordion-content .car-card:hover {
+    box-shadow: 0 50px 60px rgba(13, 110, 253, 0.6) !important;
+    border-color: var(--primary) !important;
+}
+
+
+/* منع تداخل البطاقات عند التكبير */
+
+.cars-grid,
+.features-grid,
+.team-grid,
+.values-grid,
+.cars-preview-grid {
+    overflow: visible !important;
+    padding: 10px 0 !important;
+    /* إضافة مساحة حول البطاقات */
+}
+
+
+/* ===== تنسيق أعلام الدول ===== */
+
+.car-year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.car-year .country-flag {
+    font-size: 1.2em;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+
+/* للهواتف المحمولة */
+
+@media (max-width: 768px) {
+    .car-year {
+        font-size: 14px;
+    }
+    .car-year .country-flag {
+        font-size: 1.1em;
+    }
+}
+
+
+/* تنسيق العلم في صفحة التفاصيل */
+
+.info-card p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
