@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car World - الرئيسية | منصة السيارات الرقمية</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d6efd">
 
     <!-- Fonts & Icons -->
         <link rel="icon" type="image/x-icon" href="/CF/icons/favicon.ico">
@@ -898,7 +900,11 @@
                 header.style.transform = 'translateY(0)';
             }
             lastScroll = currentScroll;
-        });
+        });        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log('Service Worker registered!'));
+        }
+
     </script>
 </body>
 
