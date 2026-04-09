@@ -1,6 +1,6 @@
 {
   "name": "Car World",
-  "short_name": "عالم السيارات Car World",
+  "short_name": "عالم السيارات C-W",
   "description": "منصة لبيع وشراء السيارات الجديدة والمستعملة في مصر",
   "start_url": "/CF/index.html",
   "scope": "/CF/",
