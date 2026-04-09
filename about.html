@@ -6,26 +6,22 @@
     <meta name="description" content="تعرف على قصة Car World وفريق التطوير المكون من 6 طلاب. رسالتنا ورؤيتنا وقيمنا التي نعمل بها.">
     <meta name="keywords" content="سيارات, شراء سيارات, بيع سيارات, سيارات جديدة, سيارات مستعملة, BMW, مرسيدس, أودي, تويوتا, هيونداي, كيا, تقسيط سيارات, مصر, القاهرة, Car World, من نحن">
     <title>من نحن ؟ - Car World | قصة علامتنا التجارية</title>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/CF/manifest.json">
     <meta name="theme-color" content="#0d6efd">
-    <!-- Fonts & Icons --> 
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" type="image/x-icon" href="/CF/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/CF/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/CF/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/CF/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/CF/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/CF/icons/android-chrome-512x512.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="/CF/responsive.css">
+    <script src="/CF/script.js" defer></script>
 
     <style>
         * {
@@ -944,18 +940,18 @@
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo-link">
-            <img src="assets/images/logo-main-dark.png" alt="CAR WORLD Logo" class="logo logo-dark">
-            <img src="assets/images/logo-main-light.png" alt="CAR WORLD Logo" class="logo logo-light" style="display: none;">
+        <a href="/CF/index.html" class="logo-link">
+            <img src="/CF/assets/images/logo-main-dark.png" alt="CAR WORLD Logo" class="logo logo-dark">
+            <img src="/CF/assets/images/logo-main-light.png" alt="CAR WORLD Logo" class="logo logo-light" style="display: none;">
         </a>
         <nav class="nav">
-            <a href="index.html" class="nav-btn">الرئيسية</a>
-            <a href="cars.html" class="nav-btn">السيارات</a>
-            <a href="stats.html" class="nav-btn">إحصائيات</a>
-            <a href="about.html" class="nav-btn active">من نحن ؟</a>
-            <a href="contact.html" class="nav-btn">اتصال</a>
-            <a href="faq.html" class="nav-btn">FAQ</a>
-            <a href="terms.html" class="nav-btn">الشروط</a>
+            <a href="/CF/index.html" class="nav-btn">الرئيسية</a>
+            <a href="/CF/cars.html" class="nav-btn">السيارات</a>
+            <a href="/CF/stats.html" class="nav-btn">إحصائيات</a>
+            <a href="/CF/about.html" class="nav-btn active">من نحن ؟</a>
+            <a href="/CF/contact.html" class="nav-btn">اتصال</a>
+            <a href="/CF/faq.html" class="nav-btn">FAQ</a>
+            <a href="/CF/terms.html" class="nav-btn">الشروط</a>
         </nav>
     </header>
 
@@ -1239,10 +1235,10 @@
             <div class="footer-section">
                 <h3>روابط سريعة</h3>
                 <ul>
-                    <li><a href="about.html">من نحن ؟</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
-                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
-                    <li><a href="terms.html">الشروط والأحكام</a></li>
+                    <li><a href="/CF/about.html">من نحن ؟</a></li>
+                    <li><a href="/CF/contact.html">اتصل بنا</a></li>
+                    <li><a href="/CF/faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="/CF/terms.html">الشروط والأحكام</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -1276,7 +1272,7 @@
             lastScroll = currentScroll;
         });  
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
+            navigator.serviceWorker.register('/CF/sw.js')
                 .then(() => console.log('Service Worker registered!'));
         }
     </script>
