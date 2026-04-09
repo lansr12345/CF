@@ -1,8 +1,8 @@
- // ==================== دالة تحويل الدولة إلى علم SVG ====================
+// ==================== دالة تحويل الدولة إلى علم SVG ====================
 function getCountryFlagSVG(country, isStats = false) {
     const width = isStats ? 60 : 30;
     const height = isStats ? 45 : 22.5;
- 
+
     const flags = {
         "ألمانيا": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="${width}" height="${height}"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>`,
         "اليابان": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="${width}" height="${height}"><rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r="0.6" fill="#BC002D"/></svg>`,
@@ -23,7 +23,7 @@ const cars = {
                 model: "X5",
                 year: 2024,
                 price: "3,150,000 جنيه",
-                image: "assets/images/img1894BMW-X5.jpg",
+                image: "/CF/assets/images/img1894BMW-X5.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **BMW X5 2024 (جديد بالكامل):** سيارة الـ SUV الفاخرة الأكثر مبيعاً من BMW. تعمل بمحرك 6 سلندر 3.0 لتر تيربو بقوة 380 حصان وعزم دوران 540 نيوتن متر. تستطيع التسارع من 0 إلى 100 كم/س في 5.4 ثانية فقط، وصولاً لسرعة قصوى 250 كم/س. تأتي مع ناقل حركة أوتوماتيكي من 8 سرعات ونظام دفع رباعي ذكي xDrive. استهلاك الوقود 8.5 لتر لكل 100 كم (معدل). المواصفات: فتحة سقف بانورامية، شاشة منحنية عملاقة (12.3 و 14.9 بوصة)، نظام iDrive الأحدث، Apple CarPlay و Android Auto لاسلكي، شحن لاسلكي، مقاعد جلدية فاخرة مع تدليك وتبريد وتدفئة، نظام صوت Harman Kardon بـ 16 سماعة، إضاءة داخلية محيطة، أنظمة أمان متكاملة تشمل مثبت سرعة راداري، فرامل طوارئ أوتوماتيكية، كاميرات 360 درجة، ركن أوتوماتيكي، تحذير النقطة العمياء، ومساعدة الخروج الآمن. ضمان 5 سنوات أو 100,000 كم. اللون المتوفر: أسود كربوني.",
@@ -39,13 +39,13 @@ const cars = {
                     driveType: "دفع رباعي xDrive"
                 },
                 colors: ["أسود", "أبيض", "أزرق", "فضي"],
-                images: ["assets/images/img1894BMW-X5.jpg"]
+                images: ["/CF/assets/images/img1894BMW-X5.jpg"]
             },
             {
                 model: "7 Series",
                 year: 2025,
                 price: "3,950,000 جنيه",
-                image: "assets/images/1-bmw-7-series-hybrid.webp",
+                image: "/CF/assets/images/1-bmw-7-series-hybrid.webp",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **BMW الفئة السابعة 2025 (جديدة كلياً):** قمة الفخامة والتكنولوجيا. تعمل بمحرك 6 سلندر 3.0 لتر تيربو مع تقنية هجينة خفيفة 48V، بقوة 380 حصان. تتسارع من 0 إلى 100 كم/س في 5.2 ثانية. المقصورة الداخلية هي تحفة فنية، مع شاشة عرض أمامية ضخمة (Theatre Screen) مقاس 31 بوصة بدقة 8K تنزل من السقف للمقاعد الخلفية، مقاعد خلفية قابلة للإمالة بالكامل مع مسند قدم وتدفئة وتبريد وتدليك، نظام صوت Bowers & Wilkins Diamond بـ 36 سماعة، تحكم بالسيارة عبر شاشة تعمل باللمس في الخلف، أبواب أوتوماتيكية بالكامل، نظام عطور داخلي، زجاج عازل للحرارة والصوت بالكامل. أنظمة أمان شبه ذاتية القيادة. ضمان شامل 5 سنوات.",
@@ -61,13 +61,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["أسود", "أبيض", "رمادي", "أزرق"],
-                images: ["assets/images/1-bmw-7-series-hybrid.webp"]
+                images: ["/CF/assets/images/1-bmw-7-series-hybrid.webp"]
             },
             {
                 model: "X7",
                 year: 2024,
                 price: "2,990,000 جنيه",
-                image: "assets/images/BMW_G07_1X7A1696.jpg",
+                image: "/CF/assets/images/BMW_G07_1X7A1696.jpg",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **BMW X7 2024 (مستعمل - فئة M Sport):** SUV عائلي عملاق يتسع لـ 7 ركاب براحة تامة. السيارة بحالة ممتازة جداً، عداد 18,000 كم فقط، صيانة دورية في الوكالة. محرك 6 سلندر 3.0 لتر تيربو بقوة 340 حصان. المواصفات: فئة M Sport كاملة مع عجلات 22 بوصة، مقاعد جلدية بيضاء، شاشات ترفيه خلفية، فتحة سقف بانورامية ضخمة (أكبر فتحة سقف في فئتها)، نظام تعليق هوائي، أنظمة أمان متكاملة. اللون: أزرق معدني. سبب البيع: السفر للخارج. فرصة نادرة.",
@@ -83,13 +83,13 @@ const cars = {
                     driveType: "دفع رباعي xDrive"
                 },
                 colors: ["أزرق"],
-                images: ["assets/images/BMW_G07_1X7A1696.jpg"]
+                images: ["/CF/assets/images/BMW_G07_1X7A1696.jpg"]
             },
             {
                 model: "i8",
                 year: 2025,
                 price: "4,500,000 جنيه",
-                image: "assets/images/3yMnZwNE-BtEOf0BRSj-(edit).jpg",
+                image: "/CF/assets/images/3yMnZwNE-BtEOf0BRSj-(edit).jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **BMW i8 2025 (الهجين الرياضي):** سيارة رياضية خارقة بتصميمها المستقبلي وأبوابها التي تفتح للأعلى. نظام حركة هجين ينتج قوة إجمالية 374 حصان، مع تسارع من 0 إلى 100 في 4.4 ثانية. هيكل من ألياف الكربون لتخفيف الوزن. تعمل بالكهرباء لمسافة تصل إلى 50 كم. استهلاك البنزين في الوضع الهجين لا يتعدى 2.5 لتر لكل 100 كم. تصميم داخلي رياضي بالكربون والجلد. السيارة مستقبلية بالكامل وملفتة للأنظار.",
@@ -105,14 +105,14 @@ const cars = {
                     driveType: "دفع رباعي"
                 },
                 colors: ["أبيض", "أزرق", "فضي"],
-                images: ["assets/images/3yMnZwNE-BtEOf0BRSj-(edit).jpg"]
+                images: ["/CF/assets/images/3yMnZwNE-BtEOf0BRSj-(edit).jpg"]
             }
         ],
         Mercedes: [{
                 model: "S500",
                 year: 2024,
                 price: "3,800,000 جنيه",
-                image: "assets/images/mercedes-s-class-s500-1708352796658.webp",
+                image: "/CF/assets/images/mercedes-s-class-s500-1708352796658.webp",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes S500 2024 (أيقونة الفخامة):** سيارة السيدان التنفيذية الأولى في العالم. محرك 6 سلندر 3.0 لتر تيربو بقوة 435 حصان. تكنولوجيا لا مثيل لها: نظام التعليق الذكي E-ACTIVE BODY CONTROL الذي يميل السيارة في المنحنيات، مقاعد خلفية فاخرة قابلة للاستلقاء بالكامل مع وظيفة التدليك الحراري، نظام ترفيهي خلفي بشاشات ضخمة، نظام صوت Burmester 4D عالي الجودة، شاشة عرض ضخمة على الزجاج الأمامي، إضاءة رقمية DIGITAL LIGHT، وأنظمة أمان من أحدث جيل. رحلة لا تنسى.",
@@ -128,13 +128,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["أسود", "أبيض", "رمادي"],
-                images: ["assets/images/mercedes-s-class-s500-1708352796658.webp"]
+                images: ["/CF/assets/images/mercedes-s-class-s500-1708352796658.webp"]
             },
             {
                 model: "G-Class",
                 year: 2025,
                 price: "5,600,000 جنيه",
-                image: "assets/images/hof-mercedes-amg-g63_622_095819.jpg",
+                image: "/CF/assets/images/hof-mercedes-amg-g63_622_095819.jpg",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes G63 AMG 2025 (مستعمل - فئة G Manufaktur):** الجي كلاس الأيقونية، أقوى وأفخم سيارة دفع رباعي في العالم. محرك V8 سعة 4.0 لتر تيربو بقوة 585 حصان. هذه النسخة مستعملة وبحالة الزيرو، عداد 5,000 كم فقط. المواصفات: حزمة AMG الكاملة، عجلات 22 بوصة، مقصورة داخلية مغلفة بالكامل بأفخخ أنواع الجلد والكربون، أنوار LED حمراء، نظام عادم رياضي. اللون: أبيض ثلجي مع جنوط سوداء. السيارة للبيع بسبب عدم استخدامها.",
@@ -150,13 +150,13 @@ const cars = {
                     driveType: "دفع رباعي"
                 },
                 colors: ["أبيض"],
-                images: ["assets/images/hof-mercedes-amg-g63_622_095819.jpg"]
+                images: ["/CF/assets/images/hof-mercedes-amg-g63_622_095819.jpg"]
             },
             {
                 model: "GLE",
                 year: 2024,
                 price: "3,400,000 جنيه",
-                image: "assets/images/8a9ea33b51a84cd72c0bf814a740a13b.jpg",
+                image: "/CF/assets/images/8a9ea33b51a84cd72c0bf814a740a13b.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes GLE 2024 (كوبيه):** SUV فاخر بتصميم كوبيه رياضي. محرك 6 سلندر 3.0 لتر تيربو بقوة 367 حصان. الميزة الأبرز هي نظام التعليق الهوائي AIRMATIC الذي يوفر أقصى درجات الراحة على جميع الطرق. شاشة MBUX ضخمة، إضاءة داخلية محيطة بـ 64 لون، فتحة سقف بانورامية ضخمة، مقاعد جلدية رياضية. أنظمة أمان: مساعد القيادة النشط، فرامل الطوارئ، كاميرات 360.",
@@ -172,13 +172,13 @@ const cars = {
                     driveType: "دفع رباعي"
                 },
                 colors: ["أسود", "فضي"],
-                images: ["assets/images/8a9ea33b51a84cd72c0bf814a740a13b.jpg"]
+                images: ["/CF/assets/images/8a9ea33b51a84cd72c0bf814a740a13b.jpg"]
             },
             {
                 model: "CLS",
                 year: 2025,
                 price: "3,600,000 جنيه",
-                image: "assets/images/Mercedes-AMG_CLS_53_1X7A6800.jpg",
+                image: "/CF/assets/images/Mercedes-AMG_CLS_53_1X7A6800.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes CLS 53 AMG 2025:** السيارة الرياضية الأنيقة بأربعة أبواب. محرك 6 سلندر هايبرد بقوة 435 حصان. تصميم خارجي جذاب مع خط سقف منحدر، ومقصورة داخلية فخمة بتصميم رياضي. تنفرد بوجود إضاءة أمامية رقمية، ونظام عادم رياضي AMG، ومقاعد رياضية. تجمع بين الأداء العالي والراحة والفخامة.",
@@ -194,14 +194,14 @@ const cars = {
                     driveType: "دفع رباعي"
                 },
                 colors: ["رمادي", "أزرق"],
-                images: ["assets/images/Mercedes-AMG_CLS_53_1X7A6800.jpg"]
+                images: ["/CF/assets/images/Mercedes-AMG_CLS_53_1X7A6800.jpg"]
             }
         ],
         Audi: [{
                 model: "A8",
                 year: 2024,
                 price: "2,950,000 جنيه",
-                image: "assets/images/2018_Audi_A8_50_TDi_Quattro_Automatic_3.0.jpg",
+                image: "/CF/assets/images/2018_Audi_A8_50_TDi_Quattro_Automatic_3.0.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Audi A8 L 2024 (طويلة):** سيارة السيدان الفاخرة من أودي مع تكنولوجيا متقدمة. محرك V6 3.0 لتر تيربو بقوة 340 حصان. تأتي مع نظام تعليق هوائي متكيف، ونظام الدفع الرباعي Quattro. المقاعد الخلفية قابلة للتدفئة والتبريد والتدليك مع مسند للقدمين. شاشة تحكم خلفية. صندوق أمتعة كبير. تصميم هادئ وأنيق.",
@@ -217,13 +217,13 @@ const cars = {
                     driveType: "Quattro دفع رباعي"
                 },
                 colors: ["أسود", "فضي"],
-                images: ["assets/images/2018_Audi_A8_50_TDi_Quattro_Automatic_3.0.jpg"]
+                images: ["/CF/assets/images/2018_Audi_A8_50_TDi_Quattro_Automatic_3.0.jpg"]
             },
             {
                 model: "Q7",
                 year: 2025,
                 price: "2,500,000 جنيه",
-                image: "assets/images/2017-audi-q7-first-drive-review-car-and-driver-photo-658873-s-original.avif",
+                image: "/CF/assets/images/2017-audi-q7-first-drive-review-car-and-driver-photo-658873-s-original.avif",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **Audi Q7 2025 (مستعمل فاخر):** SUV عائلي كبير ومريح. هذه النسخة مستعملة وبحالة ممتازة جداً، عداد 30,000 كم فقط. محرك V6 3.0 لتر تيربو بقوة 340 حصان. تتسع لـ 7 راكب مع كراسي خلفية قابلة للطي كهربائياً. المواصفات: فتحة سقف بانورامية، شاشات خلفية، نظام صوت Bose، مقاعد جلدية بلون عنابي، كاميرات 360، رادار. صيانة دورية في التوكيل. اللون: رمادي.",
@@ -239,14 +239,14 @@ const cars = {
                     driveType: "Quattro دفع رباعي"
                 },
                 colors: ["رمادي"],
-                images: ["assets/images/2017-audi-q7-first-drive-review-car-and-driver-photo-658873-s-original.avif"]
+                images: ["/CF/assets/images/2017-audi-q7-first-drive-review-car-and-driver-photo-658873-s-original.avif"]
             }
         ],
         Lexus: [{
             model: "RX",
             year: 2024,
             price: "2,650,000 جنيه",
-            image: "assets/images/Lexus-RX-PHEV-style-selector-750x471-LEX-RXV-MY25-1012.06.avif",
+            image: "/CF/assets/images/Lexus-RX-PHEV-style-selector-750x471-LEX-RXV-MY25-1012.06.avif",
             condition: "new",
             country: "اليابان",
             description: "🚗 **Lexus RX 350h 2024 (هايبرد):** SUV فاخر يتميز بموثوقية لكزس الأسطورية واستهلاك وقود منخفض. محرك هايبرد 2.5 لتر بقوة إجمالية 247 حصان. تأتي مع ضمان لكزس لمدة 8 سنوات. المقصورة الداخلية هادئة جداً ومريحة، مقاعد جلدية، شاشة معلومات ضخمة 14 بوصة، نظام صوت Mark Levinson الفاخر، تصميم خارجي جريء. خيار مثالي للعائلات.",
@@ -262,13 +262,13 @@ const cars = {
                 driveType: "دفع أمامي"
             },
             colors: ["فضي", "أزرق"],
-            images: ["assets/images/Lexus-RX-PHEV-style-selector-750x471-LEX-RXV-MY25-1012.06.avif"]
+            images: ["/CF/assets/images/Lexus-RX-PHEV-style-selector-750x471-LEX-RXV-MY25-1012.06.avif"]
         }],
         Porsche: [{
             model: "Cayenne",
             year: 2025,
             price: "4,200,000 جنيه",
-            image: "assets/images/2024-porsche-cayenne.jpg",
+            image: "/CF/assets/images/2024-porsche-cayenne.jpg",
             condition: "new",
             country: "ألمانيا",
             description: "🚗 **Porsche Cayenne S 2025:** SUV رياضي بامتياز. محرك V6 2.9 لتر تيربو بقوة 440 حصان. تقدم أداء قيادة رياضياً لا يضاهى بفضل هيكلها ونظام تعليقها. المقصورة الداخلية فاخرة وتضع السائق في مركز التحكم، مع شاشة منحنية للعدادات، وناقل حركة أنيق. صندوق خلفي كبير. الخيار الأمثل لمن يبحث عن سيارة عائلية رياضية.",
@@ -284,7 +284,7 @@ const cars = {
                 driveType: "دفع رباعي"
             },
             colors: ["أبيض", "أسود", "أحمر"],
-            images: ["assets/images/2024-porsche-cayenne.jpg"]
+            images: ["/CF/assets/images/2024-porsche-cayenne.jpg"]
         }]
     },
     medium: {
@@ -292,7 +292,7 @@ const cars = {
                 model: "3 Series",
                 year: 2024,
                 price: "1,850,000 جنيه",
-                image: "assets/images/normal/webp_mobile_listing_main_14556_st1280_046.webp",
+                image: "/CF/assets/images/normal/webp_mobile_listing_main_14556_st1280_046.webp",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **BMW 320i M Sport 2024 (جديدة):** أيقونة السيارات الرياضية متوسطة الحجم. محرك 4 سلندر 2.0 لتر تيربو بقوة 184 حصان مع نظام دفع خلفي. توفر متعة قيادة لا تضاهى بفضل التوزيع المثالي للوزن. المواصفات: فئة M Sport مع مظهر خارجي رياضي، مقاعد رياضية، عجلات 18 بوصة، شاشة عدادات رقمية، شاشة تحكم مركزية، أنظمة أمان أساسية. استهلاك وقود اقتصادي.",
@@ -308,13 +308,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["أزرق", "أسود", "أبيض"],
-                images: ["assets/images/normal/webp_mobile_listing_main_14556_st1280_046.webp"]
+                images: ["/CF/assets/images/normal/webp_mobile_listing_main_14556_st1280_046.webp"]
             },
             {
                 model: "5 Series",
                 year: 2025,
                 price: "2,200,000 جنيه",
-                image: "assets/images/normal/25-BMW-5-Series-Exterior.avif",
+                image: "/CF/assets/images/normal/25-BMW-5-Series-Exterior.avif",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **BMW 520i M Sport 2025 (مستعملة - فئة VIP):** سيارة سيدان تنفيذية متوسطة الحجم. هذا الموديل مستعمل وبحالة ممتازة، عداد 12,000 كم فقط. محرك 4 سلندر 2.0 لتر تيربو بقوة 208 حصان. المواصفات: فئة M Sport كاملة، عجلات 19 بوصة، مقاعد جلدية بيضاء مع حزمة التدفئة، شاشة منحنية عملاقة، إضاءة داخلية محيطة، كاميرات 360. السيارة بالكامل عليها ضمان حتى 2027. اللون: أزرق.",
@@ -330,13 +330,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["أزرق"],
-                images: ["assets/images/normal/25-BMW-5-Series-Exterior.avif"]
+                images: ["/CF/assets/images/normal/25-BMW-5-Series-Exterior.avif"]
             },
             {
                 model: "4 Series",
                 year: 2024,
                 price: "1,950,000 جنيه",
-                image: "assets/images/normal/bmw-4-series-convertible-modelfinder.png",
+                image: "/CF/assets/images/normal/bmw-4-series-convertible-modelfinder.png",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **BMW 420i Gran Coupe 2024 (جديدة):** سيارة كوبيه عملية بأربعة أبواب. محرك 4 سلندر 2.0 لتر تيربو بقوة 184 حصان. تصميمها الرياضي والأنيق مع الشبك الأمامي الكبير والمصابيح الحادة يجعلها ملفتة للغاية. مساحة داخلية جيدة وصندوق خلفي واسع. مثالية لمن يريد سيارة رياضية وعملية في نفس الوقت.",
@@ -352,13 +352,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["أبيض", "رمادي"],
-                images: ["assets/images/normal/bmw-4-series-convertible-modelfinder.png"]
+                images: ["/CF/assets/images/normal/bmw-4-series-convertible-modelfinder.png"]
             },
             {
                 model: "X3",
                 year: 2025,
                 price: "1,950,000 جنيه",
-                image: "assets/images/BMW_G07_1X7A1696.jpg",
+                image: "/CF/assets/images/BMW_G07_1X7A1696.jpg",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **BMW X3 xDrive20i 2025 (مستعملة - فئة xLine):** SUV متوسطة الحجم وعملية. السيارة مستعملة، عداد 20,000 كم، بحالة ممتازة. محرك 4 سلندر 2.0 لتر تيربو بقوة 184 حصان مع نظام دفع رباعي xDrive. المواصفات: فئة xLine مع لمسات خارجية كروم، مقاعد جلدية بلون بني، فتحة سقف، رادار، كاميرا خلفية. صيانة دورية كاملة.",
@@ -374,14 +374,14 @@ const cars = {
                     driveType: "xDrive دفع رباعي"
                 },
                 colors: ["بني"],
-                images: ["assets/images/BMW_G07_1X7A1696.jpg"]
+                images: ["/CF/assets/images/BMW_G07_1X7A1696.jpg"]
             }
         ],
         Mercedes: [{
                 model: "C180",
                 year: 2024,
                 price: "2,050,000 جنيه",
-                image: "assets/images/normal/مرسيدس-C180-1.jpg",
+                image: "/CF/assets/images/normal/مرسيدس-C180-1.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes C180 AMG Line 2024 (جديدة):** سيارة السيدان الأنيقة والفاخرة. محرك 1.5 لتر تيربو بقوة 170 حصان مع تقنية هايبرد خفيفة. تقدم راحة وقود ممتازة وتصميماً مشابهاً لشقيقتها الكبرى S-Class من الداخل والخارج، خاصة مع الشاشة العمودية الكبيرة. أنظمة أمان متطورة. خيار رائع للمدينة.",
@@ -397,13 +397,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["فضي", "أسود"],
-                images: ["assets/images/normal/مرسيدس-C180-1.jpg"]
+                images: ["/CF/assets/images/normal/مرسيدس-C180-1.jpg"]
             },
             {
                 model: "E-Class",
                 year: 2025,
                 price: "2,650,000 جنيه",
-                image: "assets/images/normal/mercedes-benz-e-class-w214-highlights-videostill-3302x1858-02-2023.avif",
+                image: "/CF/assets/images/normal/mercedes-benz-e-class-w214-highlights-videostill-3302x1858-02-2023.avif",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes E200 2025 (مستعملة - فادة Exclusive):** سيارة تنفيذية بامتياز. هذا الموديل مستعمل، عداد 25,000 كم فقط، بحالة ممتازة. محرك 2.0 لتر تيربو بقوة 197 حصان. المواصفات: فئة Exclusive مع شعار مرسيدس على العمود الخلفي، مقاعد جلدية فاخرة، نظام صوت Burmester، إضاءة داخلية محيطة. اللون: أسود كلاسيكي.",
@@ -419,13 +419,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["أسود"],
-                images: ["assets/images/normal/mercedes-benz-e-class-w214-highlights-videostill-3302x1858-02-2023.avif"]
+                images: ["/CF/assets/images/normal/mercedes-benz-e-class-w214-highlights-videostill-3302x1858-02-2023.avif"]
             },
             {
                 model: "C200",
                 year: 2024,
                 price: "2,250,000 جنيه",
-                image: "assets/images/normal/مرسيدس-C200.jpg",
+                image: "/CF/assets/images/normal/مرسيدس-C200.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes C200 2024 (جديدة):** نسخة أقوى من C180. محرك 1.5 لتر تيربو بقوة 204 حصان. تأتي بنفس المواصفات الفاخرة من C180 لكن مع قوة إضافية. اختيار ممتاز لمن يبحث عن أداء أفضل وفخامة.",
@@ -441,13 +441,13 @@ const cars = {
                     driveType: "دفع خلفي"
                 },
                 colors: ["فضي", "أبيض"],
-                images: ["assets/images/normal/مرسيدس-C200.jpg"]
+                images: ["/CF/assets/images/normal/مرسيدس-C200.jpg"]
             },
             {
                 model: "A-Class",
                 year: 2025,
                 price: "1,750,000 جنيه",
-                image: "assets/images/normal/1-Mercedes-A-Class.jpg",
+                image: "/CF/assets/images/normal/1-Mercedes-A-Class.jpg",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **Mercedes A200 2025 (مستعملة - فئة AMG Line):** أصغر أفراد عائلة مرسيدس، سيارة هاتشباك رياضية. هذه النسخة مستعملة، عداد 15,000 كم، بحالة ممتازة. محرك 1.3 لتر تيربو بقوة 163 حصان. المواصفات: فئة AMG Line مع مظهر رياضي، مقاعد رياضية، شاشة عريضة، إضاءة داخلية محيطة. مثالية للمدينة.",
@@ -463,14 +463,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر"],
-                images: ["assets/images/normal/1-Mercedes-A-Class.jpg"]
+                images: ["/CF/assets/images/normal/1-Mercedes-A-Class.jpg"]
             }
         ],
         Audi: [{
                 model: "A4",
                 year: 2024,
                 price: "1,650,000 جنيه",
-                image: "assets/images/normal/Audi_A4_B9_sedans_(FL)_1X7A2441.jpg",
+                image: "/CF/assets/images/normal/Audi_A4_B9_sedans_(FL)_1X7A2441.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Audi A4 2024 (جديدة):** سيارة سيدان متوسطة الحجم بتصميم أنيق وتكنولوجيا متقدمة. محرك 2.0 لتر تيربو بقوة 201 حصان مع نظام دفع أمامي أو رباعي Quattro. تشتهر بشاشاتها الرقمية الواضحة، وخاماتها الداخلية عالية الجودة، وراحة القيادة.",
@@ -486,13 +486,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي", "أسود"],
-                images: ["assets/images/normal/Audi_A4_B9_sedans_(FL)_1X7A2441.jpg"]
+                images: ["/CF/assets/images/normal/Audi_A4_B9_sedans_(FL)_1X7A2441.jpg"]
             },
             {
                 model: "A6",
                 year: 2025,
                 price: "2,150,000 جنيه",
-                image: "assets/images/normal/audi-a6-phev-2019-2-e1583761961173-1220x915.jpg",
+                image: "/CF/assets/images/normal/audi-a6-phev-2019-2-e1583761961173-1220x915.jpg",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **Audi A6 2025 (مستعملة):** سيارة سيدان تنفيذية متوسطة الحجم. هذا الموديل مستعمل، عداد 30,000 كم فقط. محرك 2.0 لتر تيربو بقوة 204 حصان. المواصفات: فئة بريميوم مع مقاعد جلدية، شاشات ثلاثية (Virtual Cockpit)، تكييف خلفي، كاميرات 360. اللون: فضي.",
@@ -508,13 +508,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/normal/audi-a6-phev-2019-2-e1583761961173-1220x915.jpg"]
+                images: ["/CF/assets/images/normal/audi-a6-phev-2019-2-e1583761961173-1220x915.jpg"]
             },
             {
                 model: "A3",
                 year: 2024,
                 price: "1,400,000 جنيه",
-                image: "assets/images/normal/Audi_A3_8Y_Sedan_IMG_5936.jpg",
+                image: "/CF/assets/images/normal/Audi_A3_8Y_Sedan_IMG_5936.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Audi A3 2024 (جديدة):** سيارة سيدان مدمجة وأنيقة. محرك 1.4 لتر تيربو بقوة 150 حصان. تقدم تقنيات مماثلة لأختها الكبرى A4، مثل شاشة العدادات الرقمية وشاشة التحكم، مع تصميم داخلي رياضي. خيار ممتاز للمدينة بفضل حجمها الصغير.",
@@ -530,13 +530,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أزرق", "رمادي"],
-                images: ["assets/images/normal/Audi_A3_8Y_Sedan_IMG_5936.jpg"]
+                images: ["/CF/assets/images/normal/Audi_A3_8Y_Sedan_IMG_5936.jpg"]
             },
             {
                 model: "Q5",
                 year: 2025,
                 price: "2,000,000 جنيه",
-                image: "assets/images/normal/Audi_Q5_FY_50_TFSI_e_Facelift_IMG_5931.jpg",
+                image: "/CF/assets/images/normal/Audi_Q5_FY_50_TFSI_e_Facelift_IMG_5931.jpg",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **Audi Q5 2025 (مستعملة):** SUV متوسطة الحجم عملية وأنيقة. هذه النسخة مستعملة، عداد 22,000 كم. محرك 2.0 لتر تيربو بقوة 201 حصان. المواصفات: فتحة سقف بانورامية كبيرة، مقاعد جلدية، نظام صوتي ممتاز، رادار. اللون: أزرق.",
@@ -552,14 +552,14 @@ const cars = {
                     driveType: "Quattro دفع رباعي"
                 },
                 colors: ["أزرق"],
-                images: ["assets/images/normal/Audi_Q5_FY_50_TFSI_e_Facelift_IMG_5931.jpg"]
+                images: ["/CF/assets/images/normal/Audi_Q5_FY_50_TFSI_e_Facelift_IMG_5931.jpg"]
             }
         ],
         Volkswagen: [{
                 model: "Passat",
                 year: 2024,
                 price: "1,400,000 جنيه",
-                image: "assets/images/normal/DB2019AU00902_web_1600.jpg",
+                image: "/CF/assets/images/normal/DB2019AU00902_web_1600.jpg",
                 condition: "new",
                 country: "ألمانيا",
                 description: "🚗 **Volkswagen Passat 2024 (جديدة):** سيارة سيدان عائلية واسعة وعملية. محرك 1.4 لتر تيربو بقوة 150 حصان. تشتهر بمساحتها الداخلية الكبيرة وصندوق الأمتعة الضخم. تقدم تجربة قيادة مريحة ومستقرة على الطرق السريعة. خيار اقتصادي وعائلي ممتاز.",
@@ -575,13 +575,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي", "أسود"],
-                images: ["assets/images/normal/DB2019AU00902_web_1600.jpg"]
+                images: ["/CF/assets/images/normal/DB2019AU00902_web_1600.jpg"]
             },
             {
                 model: "Tiguan",
                 year: 2025,
                 price: "1,600,000 جنيه",
-                image: "assets/images/normal/Sutliff-Volkswagen-GMB-May-2022-36.avif",
+                image: "/CF/assets/images/normal/Sutliff-Volkswagen-GMB-May-2022-36.avif",
                 condition: "used",
                 country: "ألمانيا",
                 description: "🚗 **Volkswagen Tiguan 2025 (مستعملة):** SUV عائلية متوسطة الحجم. هذا الموديل مستعمل، عداد 25,000 كم. محرك 1.4 لتر تيربو بقوة 150 حصان. المواصفات: فئة هايلاين (أعلى فئة) مع عجلات 18 بوصة، فتحة سقف بانورامية، مقاعد جلدية، رادار، كاميرا خلفية. خيار عملي وموثوق.",
@@ -597,14 +597,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/normal/Sutliff-Volkswagen-GMB-May-2022-36.avif"]
+                images: ["/CF/assets/images/normal/Sutliff-Volkswagen-GMB-May-2022-36.avif"]
             }
         ],
         Honda: [{
                 model: "Accord",
                 year: 2024,
                 price: "1,500,000 جنيه",
-                image: "assets/images/normal/2025-toyota-camry-xse-awd-vs-2024-honda-accord-sport-hybrid-102-673b8094b2198.avif",
+                image: "/CF/assets/images/normal/2025-toyota-camry-xse-awd-vs-2024-honda-accord-sport-hybrid-102-673b8094b2198.avif",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Honda Accord 2024 (جديدة):** سيارة سيدان عائلية رياضية. محرك 1.5 لتر تيربو بقوة 192 حصان. تشتهر بموثوقيتها العالية، واتساع مقصورتها الداخلية، وتقنيات السلامة Honda Sensing القياسية. قيادة ممتعة واستهلاك وقود جيد.",
@@ -620,13 +620,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر", "أبيض"],
-                images: ["assets/images/normal/2025-toyota-camry-xse-awd-vs-2024-honda-accord-sport-hybrid-102-673b8094b2198.avif"]
+                images: ["/CF/assets/images/normal/2025-toyota-camry-xse-awd-vs-2024-honda-accord-sport-hybrid-102-673b8094b2198.avif"]
             },
             {
                 model: "CR-V",
                 year: 2025,
                 price: "1,750,000 جنيه",
-                image: "assets/images/normal/Honda_CR-V_e-HEV_Elegance_AWD_(VI)_–_f_14072024.jpg",
+                image: "/CF/assets/images/normal/Honda_CR-V_e-HEV_Elegance_AWD_(VI)_–_f_14072024.jpg",
                 condition: "used",
                 country: "اليابان",
                 description: "🚗 **Honda CR-V 2025 (مستعملة):** SUV عائلية عملية وموثوقة. هذا الموديل مستعمل، عداد 18,000 كم. محرك 1.5 لتر تيربو بقوة 190 حصان. المواصفات: فئة Touring مع فتحة سقف، مقاعد جلدية، شاشة عدادات رقمية، أنظمة أمان Honda Sensing كاملة. اللون: رمادي.",
@@ -642,14 +642,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["رمادي"],
-                images: ["assets/images/normal/Honda_CR-V_e-HEV_Elegance_AWD_(VI)_–_f_14072024.jpg"]
+                images: ["/CF/assets/images/normal/Honda_CR-V_e-HEV_Elegance_AWD_(VI)_–_f_14072024.jpg"]
             }
         ],
         Mazda: [{
                 model: "6",
                 year: 2024,
                 price: "1,350,000 جنيه",
-                image: "assets/images/normal/2018_Mazda6_Sport_NAV+_Diesel_2.2_Front.jpg",
+                image: "/CF/assets/images/normal/2018_Mazda6_Sport_NAV+_Diesel_2.2_Front.jpg",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Mazda 6 2024 (جديدة):** سيارة سيدان تتميز بتصميمها الأنيق (KODO Design) وديناميكيتها الممتعة في القيادة. محرك 2.5 لتر بقوة 187 حصان. المقصورة الداخلية فخمة على غير العادة في هذه الفئة، بخامات عالية الجودة وتصميم هادئ. خيار لمن يبحث عن سيارة مختلفة.",
@@ -665,13 +665,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر", "أبيض"],
-                images: ["assets/images/normal/2018_Mazda6_Sport_NAV+_Diesel_2.2_Front.jpg"]
+                images: ["/CF/assets/images/normal/2018_Mazda6_Sport_NAV+_Diesel_2.2_Front.jpg"]
             },
             {
                 model: "CX-5",
                 year: 2025,
                 price: "1,600,000 جنيه",
-                image: "assets/images/normal/2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic,_front_right.jpg",
+                image: "/CF/assets/images/normal/2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic,_front_right.jpg",
                 condition: "used",
                 country: "اليابان",
                 description: "🚗 **Mazda CX-5 2025 (مستعملة):** SUV متوسطة الحجم بتصميم أنيق. هذا الموديل مستعمل، عداد 15,000 كم. محرك 2.5 لتر بقوة 187 حصان. المواصفات: فئة Grand Touring مع عجلات 19 بوصة، مقاعد جلدية، فتحة سقف، شاشة عدادات رقمية، نظام صوت Bose. اللون: أحمر.",
@@ -687,7 +687,7 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر"],
-                images: ["assets/images/normal/2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic,_front_right.jpg"]
+                images: ["/CF/assets/images/normal/2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic,_front_right.jpg"]
             }
         ]
     },
@@ -696,7 +696,7 @@ const cars = {
                 model: "Corolla",
                 year: 2024,
                 price: "1,050,000 جنيه",
-                image: "assets/images/economy/darkteal2f-optimized.png",
+                image: "/CF/assets/images/economy/darkteal2f-optimized.png",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Toyota Corolla 2024 (جديدة):** السيارة الأكثر مبيعاً في العالم. محرك 1.6 لتر بقوة 120 حصان. تشتهر بموثوقيتها الأسطورية، وقلة أعطالها، وانخفاض تكاليف صيانتها. سيارة عائلية مثالية للمدينة والسفرات القصيرة، مع استهلاك وقود اقتصادي للغاية. ضمان 5 سنوات.",
@@ -712,13 +712,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أزرق", "فضي", "أبيض"],
-                images: ["assets/images/economy/darkteal2f-optimized.png"]
+                images: ["/CF/assets/images/economy/darkteal2f-optimized.png"]
             },
             {
                 model: "Yaris",
                 year: 2025,
                 price: "950,000 جنيه",
-                image: "assets/images/economy/667b034bb73694c3551982b5abadc235.jpg",
+                image: "/CF/assets/images/economy/667b034bb73694c3551982b5abadc235.jpg",
                 condition: "used",
                 country: "اليابان",
                 description: "🚗 **Toyota Yaris 2025 (مستعملة):** سيارة هاتشباك صغيرة الحجم مثالية للزحام. هذا الموديل مستعمل، عداد 10,000 كم فقط. محرك 1.5 لتر بقوة 106 حصان. المواصفات: فئة عالية مع شاشة تعمل باللمس، كاميرا خلفية، جنوط ألمنيوم. استهلاك الوقود ممتاز جداً. فرصة رائعة.",
@@ -734,13 +734,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/economy/667b034bb73694c3551982b5abadc235.jpg"]
+                images: ["/CF/assets/images/economy/667b034bb73694c3551982b5abadc235.jpg"]
             },
             {
                 model: "Camry",
                 year: 2024,
                 price: "1,350,000 جنيه",
-                image: "assets/images/economy/camry-exterior-right-front-three-quarter-15.avif",
+                image: "/CF/assets/images/economy/camry-exterior-right-front-three-quarter-15.avif",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Toyota Camry 2024 (جديدة):** سيارة سيدان عائلية واسعة ومريحة. محرك 2.5 لتر بقوة 181 حصان. تشتهر برحابة مقصورتها الداخلية وموثوقيتها العالية. تصميمها الخارجي أصبح أكثر شباباً وجاذبية. خيار ممتاز للعائلات.",
@@ -756,13 +756,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أبيض", "أسود"],
-                images: ["assets/images/economy/camry-exterior-right-front-three-quarter-15.avif"]
+                images: ["/CF/assets/images/economy/camry-exterior-right-front-three-quarter-15.avif"]
             },
             {
                 model: "RAV4",
                 year: 2025,
                 price: "1,600,000 جنيه",
-                image: "assets/images/economy/Toyota+Pressroom+-+3bf030aa-6edb-4d98-876c-c126597b365c+(1).webp",
+                image: "/CF/assets/images/economy/Toyota+Pressroom+-+3bf030aa-6edb-4d98-876c-c126597b365c+(1).webp",
                 condition: "used",
                 country: "اليابان",
                 description: "🚗 **Toyota RAV4 2025 (مستعملة):** SUV عائلية رائدة في فئتها. هذا الموديل مستعمل، عداد 22,000 كم. محرك 2.0 لتر بقوة 152 حصان. المواصفات: فئة XLE مع فتحة سقف عادية، مقاعد قماش، شاشة عدادات رقمية، كاميرا 360. مساحة داخلية وصندوق أمتعة كبير جداً.",
@@ -778,13 +778,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/economy/Toyota+Pressroom+-+3bf030aa-6edb-4d98-876c-c126597b365c+(1).webp"]
+                images: ["/CF/assets/images/economy/Toyota+Pressroom+-+3bf030aa-6edb-4d98-876c-c126597b365c+(1).webp"]
             },
             {
                 model: "Aqua",
                 year: 2024,
                 price: "1,000,000 جنيه",
-                image: "assets/images/economy/2023-toyota-aqua-gr-sport.webp",
+                image: "/CF/assets/images/economy/2023-toyota-aqua-gr-sport.webp",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Toyota Aqua 2024 (جديدة):** سيارة هاتشباك هايريد صغيرة الحجم، الأكثر اقتصادية في استهلاك الوقود. محرك هايبرد يستهلك أقل من 3.5 لتر بنزين لكل 100 كم. موفرة جداً في الزحام. تأتي بتكنولوجيا هجينة موثوقة من تويوتا. مثالية جداً للميزانية المحدودة والاستخدام اليومي المكثف.",
@@ -800,14 +800,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أخضر"],
-                images: ["assets/images/economy/2023-toyota-aqua-gr-sport.webp"]
+                images: ["/CF/assets/images/economy/2023-toyota-aqua-gr-sport.webp"]
             }
         ],
         Hyundai: [{
                 model: "Accent",
                 year: 2024,
                 price: "850,000 جنيه",
-                image: "assets/images/economy/2022-hyundai-accent-mmp-1-1634756931.avif",
+                image: "/CF/assets/images/economy/2022-hyundai-accent-mmp-1-1634756931.avif",
                 condition: "new",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Hyundai Accent 2024 (جديدة):** سيارة سيدان اقتصادية وبأسعار مناسبة جداً. محرك 1.4 لتر بقوة 100 حصان. تقدم قيمة ممتازة مقابل السعر مع تصميم عصري ومساحة داخلية مقبولة. ضمان 5 سنوات من هيونداي. خيار ذكي للسيارة الأولى.",
@@ -823,13 +823,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي", "أحمر"],
-                images: ["assets/images/economy/2022-hyundai-accent-mmp-1-1634756931.avif"]
+                images: ["/CF/assets/images/economy/2022-hyundai-accent-mmp-1-1634756931.avif"]
             },
             {
                 model: "Elantra",
                 year: 2025,
                 price: "1,050,000 جنيه",
-                image: "assets/images/economy/2024-hyundai-elantra-limited-120-64ef85e5113c4.avif",
+                image: "/CF/assets/images/economy/2024-hyundai-elantra-limited-120-64ef85e5113c4.avif",
                 condition: "used",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Hyundai Elantra 2025 (مستعملة):** سيارة سيدان بتصميم جريء. هذا الموديل مستعمل، عداد 18,000 كم. محرك 1.6 لتر بقوة 128 حصان. المواصفات: فئة Smart مع شاشة عدادات رقمية، شاشة تحكم مركزية كبيرة، فتحة سقف، مقاعد جلد. اللون: رمادي.",
@@ -845,13 +845,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["رمادي"],
-                images: ["assets/images/economy/2024-hyundai-elantra-limited-120-64ef85e5113c4.avif"]
+                images: ["/CF/assets/images/economy/2024-hyundai-elantra-limited-120-64ef85e5113c4.avif"]
             },
             {
                 model: "Creta",
                 year: 2024,
                 price: "1,150,000 جنيه",
-                image: "assets/images/economy/2022_Hyundai_Creta_1.6_Plus_(Chile)_front_view.jpg",
+                image: "/CF/assets/images/economy/2022_Hyundai_Creta_1.6_Plus_(Chile)_front_view.jpg",
                 condition: "new",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Hyundai Creta 2024 (جديدة):** SUV مدمجة عملية وأنيقة. محرك 1.5 لتر بقوة 115 حصان. تتميز بتصميمها الخارجي الجذاب وارتفاعها عن الأرض، مع مساحة داخلية جيدة للركاب الخلفيين. خيار ممتاز لمن يريد سيارة SUV اقتصادية.",
@@ -867,13 +867,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أزرق"],
-                images: ["assets/images/economy/2022_Hyundai_Creta_1.6_Plus_(Chile)_front_view.jpg"]
+                images: ["/CF/assets/images/economy/2022_Hyundai_Creta_1.6_Plus_(Chile)_front_view.jpg"]
             },
             {
                 model: "Tucson",
                 year: 2025,
                 price: "1,400,000 جنيه",
-                image: "assets/images/economy/Hyundai_Tucson_2.0_CRDi_4WD_Premium_(III)_–_Frontansicht,_5._September_2015,_Düsseldorf.jpg",
+                image: "/CF/assets/images/economy/Hyundai_Tucson_2.0_CRDi_4WD_Premium_(III)_–_Frontansicht,_5._September_2015,_Düsseldorf.jpg",
                 condition: "used",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Hyundai Tucson 2025 (مستعملة):** SUV عائلية بتصميم مستقبلي. هذا الموديل مستعمل، عداد 20,000 كم. محرك 1.6 لتر تيربو بقوة 177 حصان. المواصفات: فئة Limited مع مقاعد جلدية، فتحة سقف بانورامية كبيرة، شاشة عدادات رقمية، رادار، كاميرات 360.",
@@ -889,13 +889,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["رمادي"],
-                images: ["assets/images/economy/Hyundai_Tucson_2.0_CRDi_4WD_Premium_(III)_–_Frontansicht,_5._September_2015,_Düsseldorf.jpg"]
+                images: ["/CF/assets/images/economy/Hyundai_Tucson_2.0_CRDi_4WD_Premium_(III)_–_Frontansicht,_5._September_2015,_Düsseldorf.jpg"]
             },
             {
                 model: "i10",
                 year: 2024,
                 price: "750,000 جنيه",
-                image: "assets/images/economy/generation_67611b225ba76_image.webp",
+                image: "/CF/assets/images/economy/generation_67611b225ba76_image.webp",
                 condition: "new",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Hyundai i10 2024 (جديدة):** سيارة صغيرة الحجم (A-Segment) مثالية للاستخدام اليومي في المدن المزدحمة. محرك 1.2 لتر بقوة 87 حصان. سهلة الركن، اقتصادية جداً في الوقود، وصغيرة الحجم. خيار اقتصادي بامتياز.",
@@ -911,14 +911,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر", "أبيض"],
-                images: ["assets/images/economy/generation_67611b225ba76_image.webp"]
+                images: ["/CF/assets/images/economy/generation_67611b225ba76_image.webp"]
             }
         ],
         Kia: [{
                 model: "Rio",
                 year: 2024,
                 price: "860,000 جنيه",
-                image: "assets/images/economy/19313-2023-rio-5-door-1676389973.avif",
+                image: "/CF/assets/images/economy/19313-2023-rio-5-door-1676389973.avif",
                 condition: "new",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Kia Rio 2024 (جديدة):** سيارة سيدان اقتصادية تقدم ضمان 7 سنوات من كيا. محرك 1.4 لتر بقوة 100 حصان. تصميمها الأنيق وتجهيزاتها الجيدة تجعلها منافساً قوياً في فئتها. ضمان طويل يريح البال.",
@@ -934,13 +934,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/economy/19313-2023-rio-5-door-1676389973.avif"]
+                images: ["/CF/assets/images/economy/19313-2023-rio-5-door-1676389973.avif"]
             },
             {
                 model: "Cerato",
                 year: 2025,
                 price: "1,050,000 جنيه",
-                image: "assets/images/economy/e365320759cf4fe208491bcf4315b27c.jpg",
+                image: "/CF/assets/images/economy/e365320759cf4fe208491bcf4315b27c.jpg",
                 condition: "used",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Kia Cerato 2025 (مستعملة):** سيارة سيدان عائلية واسعة. هذا الموديل مستعمل، عداد 15,000 كم. محرك 1.6 لتر بقوة 130 حصان. المواصفات: فئة عليا مع مقاعد جلدية، شاشة عدادات رقمية، شاشة تحكم كبيرة، فتحة سقف. ضمان كيا متبقٍ. اللون: أزرق.",
@@ -956,13 +956,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أزرق"],
-                images: ["assets/images/economy/e365320759cf4fe208491bcf4315b27c.jpg"]
+                images: ["/CF/assets/images/economy/e365320759cf4fe208491bcf4315b27c.jpg"]
             },
             {
                 model: "Sportage",
                 year: 2024,
                 price: "1,300,000 جنيه",
-                image: "assets/images/economy/my26-sportage-ice-mep-gallery-1.avif",
+                image: "/CF/assets/images/economy/my26-sportage-ice-mep-gallery-1.avif",
                 condition: "new",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Kia Sportage 2024 (جديدة):** SUV عائلية بتصميم جريء وعصري. محرك 1.6 لتر تيربو بقوة 177 حصان. مقصورتها الداخلية واسعة ومريحة، وتأتي بتقنيات حديثة. ضمان 7 سنوات يجعلها خياراً مطمئناً للعائلات.",
@@ -978,13 +978,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أبيض", "رمادي"],
-                images: ["assets/images/economy/my26-sportage-ice-mep-gallery-1.avif"]
+                images: ["/CF/assets/images/economy/my26-sportage-ice-mep-gallery-1.avif"]
             },
             {
                 model: "Seltos",
                 year: 2025,
                 price: "1,200,000 جنيه",
-                image: "assets/images/economy/cropped-Kia-Seltos-2020-1280-01.jpg",
+                image: "/CF/assets/images/economy/cropped-Kia-Seltos-2020-1280-01.jpg",
                 condition: "used",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Kia Seltos 2025 (مستعملة):** SUV مدمجة بتصميم رياضي. هذا الموديل مستعمل، عداد 16,000 كم. محرك 1.6 لتر بقوة 123 حصان. المواصفات: فئة عالية مع فتحة سقف، مقاعد جلدية، شاشة عدادات رقمية، رادار. اللون: أحمر.",
@@ -1000,13 +1000,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر"],
-                images: ["assets/images/economy/cropped-Kia-Seltos-2020-1280-01.jpg"]
+                images: ["/CF/assets/images/economy/cropped-Kia-Seltos-2020-1280-01.jpg"]
             },
             {
                 model: "Picanto",
                 year: 2024,
                 price: "780,000 جنيه",
-                image: "assets/images/economy/2018_Kia_Picanto_3_Automatic_1.2_Front.jpg",
+                image: "/CF/assets/images/economy/2018_Kia_Picanto_3_Automatic_1.2_Front.jpg",
                 condition: "new",
                 country: "كوريا الجنوبية",
                 description: "🚗 **Kia Picanto 2024 (جديدة):** سيارة صغيرة الحجم مثالية للمدينة. محرك 1.0 لتر بقوة 67 حصان. صغيرة الحجم، سهلة الركن، اقتصادية للغاية. تأتي مع ضمان كيا الطويل 7 سنوات. خيار اقتصادي ذكي.",
@@ -1022,14 +1022,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أصفر"],
-                images: ["assets/images/economy/2018_Kia_Picanto_3_Automatic_1.2_Front.jpg"]
+                images: ["/CF/assets/images/economy/2018_Kia_Picanto_3_Automatic_1.2_Front.jpg"]
             }
         ],
         Nissan: [{
                 model: "Sentra",
                 year: 2024,
                 price: "1,050,000 جنيه",
-                image: "assets/images/economy/2018-nissan-sentra-01-placement-1533054983.avif",
+                image: "/CF/assets/images/economy/2018-nissan-sentra-01-placement-1533054983.avif",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Nissan Sentra 2024 (جديدة):** سيارة سيدان عائلية مريحة بتصميم رياضي. محرك 1.6 لتر بقوة 124 حصان. تشتهر بمقاعدها المريحة جداً (صفر جاذبية)، وصندوقها الخلفي الكبير. خيار جيد للعائلات.",
@@ -1045,13 +1045,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/economy/2018-nissan-sentra-01-placement-1533054983.avif"]
+                images: ["/CF/assets/images/economy/2018-nissan-sentra-01-placement-1533054983.avif"]
             },
             {
                 model: "Qashqai",
                 year: 2025,
                 price: "1,350,000 جنيه",
-                image: "assets/images/economy/Nissan Qashqai N-Design_012-source.jpg",
+                image: "/CF/assets/images/economy/Nissan Qashqai N-Design_012-source.jpg",
                 condition: "used",
                 country: "اليابان",
                 description: "🚗 **Nissan Qashqai 2025 (مستعملة):** SUV عائلية مدمجة وأنيقة. هذا الموديل مستعمل، عداد 20,000 كم. محرك 1.3 لتر تيربو بقوة 140 حصان. المواصفات: فئة عالية مع فتحة سقف بانورامية، مقاعد جلدية، شاشات عدادات رقمية، كاميرا 360.",
@@ -1067,13 +1067,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/economy/Nissan Qashqai N-Design_012-source.jpg"]
+                images: ["/CF/assets/images/economy/Nissan Qashqai N-Design_012-source.jpg"]
             },
             {
                 model: "Micra",
                 year: 2024,
                 price: "880,000 جنيه",
-                image: "assets/images/economy/2015_Nissan_Micra_SR_in_Brilliant_Silver,_front_right,_2024-10-11.jpg",
+                image: "/CF/assets/images/economy/2015_Nissan_Micra_SR_in_Brilliant_Silver,_front_right,_2024-10-11.jpg",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Nissan Micra 2024 (جديدة):** سيارة هاتشباك صغيرة الحجم اقتصادية. محرك 1.0 لتر بقوة 71 حصان. مثالية للتنقلات اليومية في المدينة بفضل حجمها الصغير واستهلاكها القليل للوقود. تصميمها الخارجي جذاب.",
@@ -1089,14 +1089,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر"],
-                images: ["assets/images/economy/2015_Nissan_Micra_SR_in_Brilliant_Silver,_front_right,_2024-10-11.jpg"]
+                images: ["/CF/assets/images/economy/2015_Nissan_Micra_SR_in_Brilliant_Silver,_front_right,_2024-10-11.jpg"]
             }
         ],
         Renault: [{
                 model: "Talisman",
                 year: 2024,
                 price: "1,150,000 جنيه",
-                image: "assets/images/economy/Renault_Talisman_bei_Albert_Heijn_Kerkrade_03.jpg",
+                image: "/CF/assets/images/economy/Renault_Talisman_bei_Albert_Heijn_Kerkrade_03.jpg",
                 condition: "new",
                 country: "فرنسا",
                 description: "🚗 **Renault Talisman 2024 (جديدة):** سيارة سيدان عائلية واسعة وفاخرة. محرك 1.6 لتر تيربو بقوة 160 حصان. تصميمها الفرنسي الأنيق ومقصورةها الداخلية الواسعة تجعلها مريحة جداً للسفر. تأتي بتجهيزات عديدة مثل المقاعد الجلدية وشاشة رينو العملية.",
@@ -1112,13 +1112,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/economy/Renault_Talisman_bei_Albert_Heijn_Kerkrade_03.jpg"]
+                images: ["/CF/assets/images/economy/Renault_Talisman_bei_Albert_Heijn_Kerkrade_03.jpg"]
             },
             {
                 model: "Megane",
                 year: 2025,
                 price: "1,200,000 جنيه",
-                image: "assets/images/economy/renault-megane-sedan-lff-design-003_ig_w1200_h675.jpg",
+                image: "/CF/assets/images/economy/renault-megane-sedan-lff-design-003_ig_w1200_h675.jpg",
                 condition: "used",
                 country: "فرنسا",
                 description: "🚗 **Renault Megane 2025 (مستعملة):** سيارة سيدان بتصميم رياضي. هذا الموديل مستعمل، عداد 20,000 كم. محرك 1.3 لتر تيربو بقوة 140 حصان. المواصفات: فئة عالية مع شاشة عدادات رقمية، شاشة تحكم عمودية، فتحة سقف. اللون: أزرق.",
@@ -1134,13 +1134,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أزرق"],
-                images: ["assets/images/economy/renault-megane-sedan-lff-design-003_ig_w1200_h675.jpg"]
+                images: ["/CF/assets/images/economy/renault-megane-sedan-lff-design-003_ig_w1200_h675.jpg"]
             },
             {
                 model: "Clio",
                 year: 2024,
                 price: "990,000 جنيه",
-                image: "assets/images/economy/68f9214d9e28b83c5dcb4d60_Renault-Clio-3.0-V6-RS.webp",
+                image: "/CF/assets/images/economy/68f9214d9e28b83c5dcb4d60_Renault-Clio-3.0-V6-RS.webp",
                 condition: "new",
                 country: "فرنسا",
                 description: "🚗 **Renault Clio 2024 (جديدة):** سيارة هاتشباك صغيرة الحجم اقتصادية. محرك 1.0 لتر تيربو بقوة 100 حصان. تشتهر بتصميمها الأنيق وخاماتها الداخلية الجيدة مقارنة بفئتها. خيار عصري للمدينة.",
@@ -1156,14 +1156,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أحمر"],
-                images: ["assets/images/economy/68f9214d9e28b83c5dcb4d60_Renault-Clio-3.0-V6-RS.webp"]
+                images: ["/CF/assets/images/economy/68f9214d9e28b83c5dcb4d60_Renault-Clio-3.0-V6-RS.webp"]
             }
         ],
         Suzuki: [{
                 model: "Swift",
                 year: 2024,
                 price: "870,000 جنيه",
-                image: "assets/images/economy/medium.jpg",
+                image: "/CF/assets/images/economy/medium.jpg",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Suzuki Swift 2024 (جديدة):** سيارة هاتشباك صغيرة الحجم رياضية واقتصادية. محرك 1.2 لتر بقوة 83 حصان. خفيفة الوزن، ممتعة في القيادة، واقتصادية جداً في الوقود. خيار ممتاز لمن يبحث عن سيارة صغيرة وموثوقة.",
@@ -1179,13 +1179,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أصفر"],
-                images: ["assets/images/economy/medium.jpg"]
+                images: ["/CF/assets/images/economy/medium.jpg"]
             },
             {
                 model: "Vitara",
                 year: 2025,
                 price: "1,150,000 جنيه",
-                image: "assets/images/economy/_0002_ice-greyish-blue-metallic-x-cosmic-black-pearl-metallic.png",
+                image: "/CF/assets/images/economy/_0002_ice-greyish-blue-metallic-x-cosmic-black-pearl-metallic.png",
                 condition: "used",
                 country: "اليابان",
                 description: "🚗 **Suzuki Vitara 2025 (مستعملة):** SUV مدمجة عملية. هذا الموديل مستعمل، عداد 18,000 كم. محرك 1.4 لتر تيربو بقوة 140 حصان. المواصفات: فئة GLX مع فتحة سقف بانورامية ثابتة، مقاعد جلد، شاشة عدادات رقمية، كاميرا خلفية.",
@@ -1201,14 +1201,14 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["رمادي"],
-                images: ["assets/images/economy/_0002_ice-greyish-blue-metallic-x-cosmic-black-pearl-metallic.png"]
+                images: ["/CF/assets/images/economy/_0002_ice-greyish-blue-metallic-x-cosmic-black-pearl-metallic.png"]
             }
         ],
         Mitsubishi: [{
                 model: "Lancer",
                 year: 2024,
                 price: "1,050,000 جنيه",
-                image: "assets/images/economy/Mitsubishi_Lancer_EVO_X.jpg",
+                image: "/CF/assets/images/economy/Mitsubishi_Lancer_EVO_X.jpg",
                 condition: "new",
                 country: "اليابان",
                 description: "🚗 **Mitsubishi Lancer 2024 (جديدة):** سيارة سيدان كلاسيكية موثوقة. محرك 1.8 لتر بقوة 143 حصان. تشتهر بمتانتها وصلابتها على المدى الطويل. تصميمها كلاسيكي لكنها عملية جداً وموثوقة.",
@@ -1224,13 +1224,13 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["أبيض"],
-                images: ["assets/images/economy/Mitsubishi_Lancer_EVO_X.jpg"]
+                images: ["/CF/assets/images/economy/Mitsubishi_Lancer_EVO_X.jpg"]
             },
             {
                 model: "Outlander",
                 year: 2025,
                 price: "1,350,000 جنيه",
-                image: "assets/images/economy/2025_Mitsubishi_Outlander_PHEV_(fourth_generation)_IMG_3128.jpg",
+                image: "/CF/assets/images/economy/2025_Mitsubishi_Outlander_PHEV_(fourth_generation)_IMG_3128.jpg",
                 condition: "used",
                 country: "اليابان",
                 description: "🚗 **Mitsubishi Outlander 2025 (مستعملة):** SUV عائلية كبيرة بثلاثة صفوف من المقاعد. هذا الموديل مستعمل، عداد 22,000 كم. محرك 2.4 لتر بقوة 170 حصان. المواصفات: فئة عالية مع فتحة سقف، مقاعد جلدية، شاشة عدادات رقمية، رادار. تتسع لـ 7 راكب.",
@@ -1246,7 +1246,7 @@ const cars = {
                     driveType: "دفع أمامي"
                 },
                 colors: ["فضي"],
-                images: ["assets/images/economy/2025_Mitsubishi_Outlander_PHEV_(fourth_generation)_IMG_3128.jpg"]
+                images: ["/CF/assets/images/economy/2025_Mitsubishi_Outlander_PHEV_(fourth_generation)_IMG_3128.jpg"]
             }
         ]
     }
@@ -1371,7 +1371,7 @@ function displayCars(category, condition, country = 'all', year = 'all') {
                 const carDiv = document.createElement("div");
                 carDiv.className = "car-card";
                 carDiv.onclick = () => {
-                    window.location.href = `car-details.html?category=${category}&brand=${brand}&model=${car.model}`;
+                    window.location.href = `/CF/car-details.html?category=${category}&brand=${brand}&model=${car.model}`;
                 };
 
                 const flagSVG = getCountryFlagSVG(car.country, false);
@@ -1382,7 +1382,7 @@ function displayCars(category, condition, country = 'all', year = 'all') {
                     <p class="car-year">${car.year} ${flagSVG}</p>
                     <p class="car-price">💰 ${car.price}</p>
                     <span class="badge ${car.condition}">${car.condition === 'new' ? 'جديد' : 'مستعمل'}</span>
-                    <button class="buy-btn" onclick="event.stopPropagation(); window.location.href='car-details.html?category=${category}&brand=${brand}&model=${car.model}'">
+                    <button class="buy-btn" onclick="event.stopPropagation(); window.location.href='/CF/car-details.html?category=${category}&brand=${brand}&model=${car.model}'">
                         <i class="fas fa-shopping-cart"></i> أضف للشراء
                     </button>
                 `;
@@ -1477,7 +1477,7 @@ function searchCars() {
                 const carDiv = document.createElement("div");
                 carDiv.className = "car-card";
                 carDiv.onclick = () => {
-                    window.location.href = `car-details.html?category=${category}&brand=${brand}&model=${car.model}`;
+                    window.location.href = `/CF/car-details.html?category=${category}&brand=${brand}&model=${car.model}`;
                 };
 
                 const flagSVG = getCountryFlagSVG(car.country, false);
@@ -1488,7 +1488,7 @@ function searchCars() {
                     <p class="car-year">${car.year} ${flagSVG}</p>
                     <p class="car-price">💰 ${car.price}</p>
                     <span class="badge ${car.condition}">${car.condition === 'new' ? 'جديد' : 'مستعمل'}</span>
-                    <button class="buy-btn" onclick="event.stopPropagation(); window.location.href='car-details.html?category=${category}&brand=${brand}&model=${car.model}'">
+                    <button class="buy-btn" onclick="event.stopPropagation(); window.location.href='/CF/car-details.html?category=${category}&brand=${brand}&model=${car.model}'">
                         <i class="fas fa-shopping-cart"></i> أضف للشراء
                     </button>
                 `;
@@ -1568,7 +1568,7 @@ function filterByPrice() {
                 const carDiv = document.createElement("div");
                 carDiv.className = "car-card";
                 carDiv.onclick = () => {
-                    window.location.href = `car-details.html?category=${category}&brand=${brand}&model=${car.model}`;
+                    window.location.href = `/CF/car-details.html?category=${category}&brand=${brand}&model=${car.model}`;
                 };
 
                 const flagSVG = getCountryFlagSVG(car.country, false);
@@ -1579,7 +1579,7 @@ function filterByPrice() {
                     <p class="car-year">${car.year} ${flagSVG}</p>
                     <p class="car-price">💰 ${car.price}</p>
                     <span class="badge ${car.condition}">${car.condition === 'new' ? 'جديد' : 'مستعمل'}</span>
-                    <button class="buy-btn" onclick="event.stopPropagation(); window.location.href='car-details.html?category=${category}&brand=${brand}&model=${car.model}'">
+                    <button class="buy-btn" onclick="event.stopPropagation(); window.location.href='/CF/car-details.html?category=${category}&brand=${brand}&model=${car.model}'">
                         <i class="fas fa-shopping-cart"></i> أضف للشراء
                     </button>
                 `;
