@@ -1,4 +1,4 @@
-// ==================== دالة تحويل الدولة إلى علم SVG ====================
+ // ==================== دالة تحويل الدولة إلى علم SVG ====================
 function getCountryFlagSVG(country, isStats = false) {
     const width = isStats ? 60 : 30;
     const height = isStats ? 45 : 22.5;
