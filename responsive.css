@@ -1,8 +1,6 @@
 /* ========== RESPONSIVE DESIGN - CAR WORLD ========== */
 
-
 /* هذا الملف مخصص لجعل الموقع متجاوباً مع جميع الشاشات */
-
 
 /* ===== للأجهزة اللوحية والهواتف الكبيرة (عرض أقل من 1200px) ===== */
 
@@ -29,7 +27,6 @@
         padding: 0 30px;
     }
 }
-
 
 /* ===== للأجهزة اللوحية المتوسطة (عرض أقل من 992px) ===== */
 
@@ -59,7 +56,6 @@
         padding: 0 30px;
     }
 }
-
 
 /* ===== للهواتف المحمولة (عرض أقل من 768px) ===== */
 
@@ -182,15 +178,6 @@
     }
     .car-card-image {
         height: 160px !important;
-    }
-    .car-card-actions {
-        top: 5px !important;
-        left: 5px !important;
-    }
-    .action-btn {
-        width: 35px !important;
-        height: 35px !important;
-        font-size: 14px !important;
     }
     .badge {
         top: 20px !important;
@@ -339,21 +326,6 @@
     }
     .spec-item i {
         font-size: 20px !important;
-    }
-    .payment-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-    }
-    .payment-card {
-        padding: 20px !important;
-    }
-    .car-actions {
-        flex-direction: column !important;
-    }
-    .action-large-btn {
-        width: 100% !important;
-        min-width: auto !important;
-        padding: 12px !important;
     }
     .contact-buttons {
         flex-direction: column !important;
@@ -541,161 +513,6 @@
         padding: 15px !important;
         font-size: 16px !important;
     }
-    /* ===== LOGIN & PROFILE ===== */
-    .login-section {
-        padding: 120px 15px 40px !important;
-    }
-    .login-container {
-        padding: 25px !important;
-    }
-    .login-header i {
-        width: 70px !important;
-        height: 70px !important;
-        font-size: 30px !important;
-        line-height: 70px !important;
-    }
-    .login-header h1 {
-        font-size: 24px !important;
-    }
-    .login-header p {
-        font-size: 14px !important;
-    }
-    .login-tabs {
-        flex-direction: column !important;
-        gap: 5px !important;
-    }
-    .tab-btn {
-        width: 100% !important;
-        padding: 12px !important;
-    }
-    .form-group input {
-        padding: 12px 15px !important;
-    }
-    .admin-note {
-        padding: 15px !important;
-    }
-    .profile-section {
-        padding: 120px 15px 40px !important;
-    }
-    .profile-header {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 15px !important;
-        padding: 0 15px;
-    }
-    .user-info {
-        width: 100% !important;
-        flex-direction: column !important;
-        text-align: center;
-        padding: 20px !important;
-    }
-    .user-avatar {
-        margin: 0 auto 10px;
-    }
-    .user-details h2 {
-        font-size: 20px !important;
-    }
-    .stats-cards {
-        width: 100% !important;
-        flex-direction: column !important;
-        gap: 10px !important;
-    }
-    .stat-small-card {
-        width: 100% !important;
-        padding: 12px !important;
-    }
-    .logout-btn {
-        width: 100% !important;
-        justify-content: center !important;
-    }
-    .tabs-container {
-        padding: 0 15px;
-    }
-    .profile-tabs {
-        width: 100% !important;
-        flex-direction: column !important;
-    }
-    .tab-btn {
-        width: 100% !important;
-        text-align: center;
-    }
-    .remove-btn {
-        top: 20px !important;
-        left: 20px !important;
-        width: 35px !important;
-        height: 35px !important;
-    }
-    .empty-state {
-        padding: 40px 20px !important;
-    }
-    .empty-state i {
-        font-size: 60px !important;
-    }
-    .empty-state h3 {
-        font-size: 20px !important;
-    }
-    .empty-state p {
-        font-size: 14px !important;
-    }
-    .empty-state .btn {
-        padding: 12px 25px !important;
-        font-size: 14px !important;
-    }
-    .compare-table {
-        overflow-x: auto !important;
-        display: block !important;
-        margin: 0 15px;
-    }
-    .compare-table table {
-        min-width: 800px !important;
-    }
-    .compare-table th,
-    .compare-table td {
-        padding: 12px !important;
-        font-size: 13px !important;
-    }
-    /* ===== STATS ===== */
-    .stats-container {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        padding: 0 15px;
-    }
-    .stat-badge {
-        width: 100% !important;
-        text-align: center !important;
-    }
-    .brands-chart {
-        padding: 20px !important;
-        margin: 0 15px;
-        overflow-x: auto;
-    }
-    .brand-item {
-        min-width: 300px;
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 10px !important;
-    }
-    .brand-name {
-        min-width: auto !important;
-    }
-    .brand-bar-container {
-        width: 100% !important;
-    }
-    .brand-count {
-        min-width: auto !important;
-        text-align: center !important;
-    }
-    .stats-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        margin: 0 15px;
-    }
-    .stats-table th,
-    .stats-table td {
-        padding: 12px !important;
-        font-size: 13px !important;
-    }
     /* ===== CTA ===== */
     .cta-section {
         padding: 60px 15px !important;
@@ -743,9 +560,6 @@
     .footer-section ul {
         padding: 0;
     }
-    .footer-section ul li a:hover {
-        transform: none !important;
-    }
     .footer-bottom p {
         font-size: 12px !important;
     }
@@ -787,42 +601,17 @@
     .full-width-mobile {
         width: 100% !important;
     }
-    /* ===== ACCORDION ANIMATION ===== */
-    .accordion-content {
-        max-height: 0;
-        transition: max-height 0.3s ease-out;
-    }
-    .accordion-content.open {
-        max-height: 2000px;
-        transition: max-height 0.5s ease-in;
-    }
     /* ===== IMAGES ===== */
     img {
         max-width: 100% !important;
         height: auto !important;
-    }
-    /* ===== TEXT ===== */
-    p,
-    .description-text,
-    .story-text,
-    .terms-section p {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
     }
     /* ===== HEADER FIXED ISSUE ===== */
     .header {
         position: fixed !important;
         transform: translateY(0) !important;
     }
-    /* ===== SCROLLING IMPROVEMENTS ===== */
-    .accordion-content,
-    .brands-chart,
-    .compare-table,
-    .stats-table {
-        -webkit-overflow-scrolling: touch;
-    }
 }
-
 
 /* ===== للأجهزة الصغيرة جداً (عرض أقل من 400px) ===== */
 
@@ -837,13 +626,6 @@
         padding: 6px 10px !important;
         font-size: 12px !important;
     }
-    .filter-group h3 {
-        font-size: 15px !important;
-    }
-    .radio-group label {
-        padding: 6px 12px !important;
-        font-size: 12px !important;
-    }
     .car-card h3 {
         font-size: 16px !important;
     }
@@ -856,15 +638,6 @@
     .cta-container h2 {
         font-size: 20px !important;
     }
-    .cta-container p {
-        font-size: 14px !important;
-    }
-    .login-header h1 {
-        font-size: 20px !important;
-    }
-    .profile-header h2 {
-        font-size: 18px !important;
-    }
     .stat-number {
         font-size: 30px !important;
     }
@@ -875,7 +648,6 @@
         font-size: 11px !important;
     }
 }
-
 
 /* ===== للأجهزة اللوحية الأفقية (عرض بين 769px و 1024px) ===== */
 
@@ -924,7 +696,6 @@
     }
 }
 
-
 /* ===== للشاشات الكبيرة (عرض أكثر من 1400px) ===== */
 
 @media (min-width: 1400px) {
@@ -947,7 +718,6 @@
     }
 }
 
-
 /* ===== للطباعة ===== */
 
 @media print {
@@ -955,14 +725,11 @@
     .footer,
     .theme-toggle,
     .buy-btn,
-    .action-btn,
     .contact-buttons,
     .hero-btn,
     .cta-btn,
     .notification,
     .nav,
-    .login-btn,
-    .logout-btn,
     .search-box,
     .filters-container,
     .price-filter,
@@ -987,10 +754,7 @@
         border: 1px solid #ddd !important;
         box-shadow: none !important;
     }
-    h1,
-    h2,
-    h3,
-    p {
+    h1, h2, h3, p {
         color: black !important;
     }
     a {
@@ -1006,169 +770,67 @@
     }
 }
 
-
 /* ===== تحسينات إضافية ===== */
 
-
-/* منع ظهور شريط التمرير الأفقي */
-
-html,
-body {
+html, body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
 }
 
-
-/* تحسين التمرير */
-
 * {
     -webkit-tap-highlight-color: transparent;
 }
 
-
-/* تحسين الأزرار على الهاتف */
-
-button,
-.nav-btn,
-.cta-btn,
-.hero-btn,
-.buy-btn,
-.action-btn,
-.category-btn,
-.tab-btn,
-.submit-btn,
-.logout-btn {
+button, .nav-btn, .cta-btn, .hero-btn, .buy-btn, .category-btn, .submit-btn {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
 }
 
-
-/* تحسين القوائم المنسدلة */
-
-select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230d6efd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
-    background-repeat: no-repeat;
-    background-position: left 15px center;
-    padding-left: 40px !important;
-}
-
-
-/* تحسين حقول الإدخال */
-
-input,
-textarea,
-select {
+input, textarea, select {
     font-size: 16px !important;
-    /* لمنع التكبير التلقائي على iOS */
 }
-
-
-/* تحسين الصور */
-
-img {
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-
-/* تحسين التمرير السلس */
 
 html {
     scroll-behavior: smooth;
 }
 
-
-/* تحسين عرض البطاقات */
-
-.feature-card,
-.value-card,
-.team-card,
-.country-card,
-.insight-card,
-.contact-card,
-.faq-preview-card,
-.stat-card,
-.achievement-item,
-.car-card {
+.feature-card, .value-card, .team-card, .country-card, .insight-card, .contact-card, .faq-preview-card, .stat-card, .achievement-item, .car-card {
     transition: all 0.3s ease;
 }
 
-
-/* تحسين الظهور عند التمرير */
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* ========== تكبير الكارت النهائي ========== */
-
-
-/* تكبير بطاقة السيارة في صفحة السيارات */
-
+/* تكبير البطاقات عند التمرير */
 .car-card:hover {
     transform: scale(1.15) !important;
-    /* تكبير 15% */
     transition: all 0.4s ease !important;
     z-index: 1000 !important;
 }
-
-
-/* تكبير بطاقة السيارة في الصفحة الرئيسية */
 
 .car-preview-card:hover {
     transform: scale(1.15) !important;
-    /* تكبير 15% */
     transition: all 0.4s ease !important;
     z-index: 1000 !important;
 }
 
-
-/* تكبير بطاقات المميزات */
-
 .feature-card:hover {
     transform: scale(1.12) !important;
-    /* تكبير 12% */
     transition: all 0.4s ease !important;
 }
-
-
-/* تكبير بطاقات الفريق */
 
 .team-card:hover {
     transform: scale(1.12) !important;
     transition: all 0.4s ease !important;
 }
 
-
-/* تكبير بطاقات القيم */
-
 .value-card:hover {
     transform: scale(1.12) !important;
     transition: all 0.4s ease !important;
 }
 
-
-/* تكبير البطاقات في الأكورديون */
-
 .accordion-content .car-card:hover {
     transform: scale(1.12) !important;
-    /* تكبير 12% */
     transition: all 0.4s ease !important;
 }
-
-
-/* إضافة ظل قوي عند التكبير */
 
 .car-card:hover,
 .car-preview-card:hover,
@@ -1180,9 +842,6 @@ html {
     border-color: var(--primary) !important;
 }
 
-
-/* منع تداخل البطاقات عند التكبير */
-
 .cars-grid,
 .features-grid,
 .team-grid,
@@ -1190,12 +849,9 @@ html {
 .cars-preview-grid {
     overflow: visible !important;
     padding: 10px 0 !important;
-    /* إضافة مساحة حول البطاقات */
 }
 
-
-/* ===== تنسيق أعلام الدول ===== */
-
+/* تنسيق أعلام الدول */
 .car-year {
     display: flex;
     align-items: center;
@@ -1203,25 +859,11 @@ html {
     gap: 5px;
 }
 
-.car-year .country-flag {
-    font-size: 1.2em;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-
-/* للهواتف المحمولة */
-
 @media (max-width: 768px) {
     .car-year {
         font-size: 14px;
     }
-    .car-year .country-flag {
-        font-size: 1.1em;
-    }
 }
-
-
-/* تنسيق العلم في صفحة التفاصيل */
 
 .info-card p {
     display: flex;
