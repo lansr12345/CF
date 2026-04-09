@@ -2,7 +2,7 @@
 function getCountryFlagSVG(country, isStats = false) {
     const width = isStats ? 60 : 30;
     const height = isStats ? 45 : 22.5;
-
+ 
     const flags = {
         "ألمانيا": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="${width}" height="${height}"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>`,
         "اليابان": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="${width}" height="${height}"><rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r="0.6" fill="#BC002D"/></svg>`,
