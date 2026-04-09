@@ -4,28 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="إحصائيات وأرقام حصرية عن سيارات Car World. توزيع السيارات حسب الماركات والدول والسنوات.">
-    <meta name="keywords" content="سيارات, شراء سيارات, بيع سيارات, سيارات جديدة, سيارات مستعملة, BMW, مرسيدس, أودي, تويوتا, هيونداي, كيا, تقسيط سيارات, مصر, القاهرة, Car World, إحصائيات">
-    <title>الإحصائيات - Car World | بيانات وتحليلات</title>
-    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="إجابات على جميع أسئلتك حول الشراء، الدفع، الضمان، الشحن، والصيانة. مركز المساعدة الشامل من Car World.">
+    <meta name="keywords" content="سيارات, شراء سيارات, بيع سيارات, سيارات جديدة, سيارات مستعملة, BMW, مرسيدس, أودي, تويوتا, هيونداي, كيا, تقسيط سيارات, مصر, القاهرة, Car World, أسئلة شائعة, FAQ">
+    <title>الأسئلة الشائعة - Car World | مركز المساعدة</title>
+    <link rel="manifest" href="/CF/manifest.json">
     <meta name="theme-color" content="#0d6efd">
-    <!-- Fonts & Icons -->
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
-    <!-- Fonts & Icons -->
+    <link rel="icon" type="image/x-icon" href="/CF/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/CF/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/CF/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/CF/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/CF/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/CF/icons/android-chrome-512x512.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="responsive.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="/CF/responsive.css">
+    <script src="/CF/script.js" defer></script>
 
     <style>
         * {
@@ -34,7 +31,7 @@
             box-sizing: border-box;
         }
         
-         :root {
+        :root {
             --primary: #0d6efd;
             --primary-dark: #0b5ed7;
             --primary-light: #3d8bfd;
@@ -168,7 +165,7 @@
             color: white;
         }
         
-        .stats-hero {
+        .faq-hero {
             min-height: 50vh;
             display: flex;
             align-items: center;
@@ -238,423 +235,305 @@
             }
         }
         
-        .main-stats-section {
-            padding: 80px 60px;
+        .search-section {
+            padding: 60px 60px 40px;
             background: var(--bg-primary);
         }
         
-        .stats-container {
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 15px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 60px;
+            padding: 5px;
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 20px 30px;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+        }
+        
+        .search-box input::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .search-box button {
+            padding: 0 40px;
+            background: var(--primary);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .search-box button:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px var(--primary-glow);
+        }
+        
+        .categories-section {
+            padding: 40px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .categories-container {
             max-width: 1400px;
             margin: 0 auto;
         }
         
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+        .categories-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         
-        .stat-card {
+        .category-btn {
+            padding: 15px 35px;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 30px;
-            padding: 40px 30px;
-            text-align: center;
+            border-radius: 50px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            transform: scaleX(0);
-            transition: transform 0.5s ease;
-        }
-        
-        .stat-card:hover::after {
-            transform: scaleX(1);
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--border-hover);
-            box-shadow: 0 30px 60px var(--shadow-color);
-        }
-        
-        .stat-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(13, 110, 253, 0.1);
-            border-radius: 30px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            border: 1px solid rgba(13, 110, 253, 0.3);
-            transition: var(--transition);
+            gap: 10px;
         }
         
-        .stat-card:hover .stat-icon {
-            transform: scale(1.1);
+        .category-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(13, 110, 253, 0.2);
+        }
+        
+        .category-btn.active {
             background: var(--primary);
-        }
-        
-        .stat-card:hover .stat-icon i {
             color: white;
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px var(--primary-glow);
         }
         
-        .stat-icon i {
-            font-size: 36px;
-            color: var(--primary);
-            transition: var(--transition);
-        }
-        
-        .stat-number {
-            font-size: 48px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff, var(--primary-light));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 16px;
-        }
-        
-        .stat-percent {
-            margin-top: 15px;
-            color: var(--primary);
-            font-size: 20px;
-            font-weight: 600;
-        }
-        
-        .countries-section {
-            padding: 80px 60px;
+        .faq-section {
+            padding: 60px 60px 100px;
             background: var(--bg-primary);
         }
         
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 60px;
-        }
-        
-        .section-header h2 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: var(--text-primary);
-        }
-        
-        .section-header p {
-            color: var(--text-secondary);
-            font-size: 18px;
-        }
-        
-        .countries-grid {
-            max-width: 1400px;
+        .faq-container {
+            max-width: 1000px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 30px;
-            justify-content: center;
         }
         
-        .country-card {
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .faq-item {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 30px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: var(--transition);
-            position: relative;
             overflow: hidden;
-            max-width: 400px;
-            margin: 0 auto;
+            transition: var(--transition);
         }
         
-        .country-card:hover {
-            transform: translateY(-10px) scale(1.05);
+        .faq-item:hover {
             border-color: var(--border-hover);
-            box-shadow: 0 30px 60px var(--shadow-color);
+            box-shadow: 0 20px 40px var(--shadow-color);
         }
         
-        .country-flag {
-            font-size: 60px;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 10px 20px var(--shadow-color));
+        .faq-question {
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
         }
         
-        .country-name {
-            font-size: 24px;
+        .faq-question:hover {
+            background: rgba(13, 110, 253, 0.05);
+        }
+        
+        .faq-question h3 {
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 20px;
             color: var(--text-primary);
         }
         
-        .country-number {
-            font-size: 42px;
-            font-weight: 800;
+        .faq-question i {
             color: var(--primary);
-            margin-bottom: 10px;
+            font-size: 20px;
+            transition: var(--transition);
         }
         
-        .country-percent {
-            color: var(--text-muted);
-            font-size: 16px;
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
         }
         
-        .brands-section {
-            padding: 80px 60px;
-            background: var(--bg-primary);
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(0, 0, 0, 0.2);
         }
         
-        .brands-container {
-            max-width: 1400px;
-            margin: 0 auto;
+        .faq-item.active .faq-answer {
+            max-height: 500px;
         }
         
-        .brands-chart {
+        .faq-answer p {
+            padding: 0 30px 30px 30px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 80px;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 40px;
-            padding: 60px;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
         
-        .brand-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--input-bg);
-            border-radius: 20px;
-            transition: var(--transition);
-        }
-        
-        .brand-item:hover {
-            background: rgba(13, 110, 253, 0.1);
-            transform: translateX(-10px);
-        }
-        
-        .brand-name {
-            min-width: 120px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        
-        .brand-bar-container {
-            flex: 1;
-            height: 40px;
-            background: var(--border-color);
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .brand-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--primary-light));
-            border-radius: 20px;
-            width: 0%;
-            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 15px;
-            color: white;
-            font-weight: 600;
-            font-size: 14px;
-            box-shadow: 0 0 20px var(--primary-glow);
-        }
-        
-        .brand-count {
-            min-width: 100px;
-            text-align: left;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .years-section {
-            padding: 80px 60px;
-            background: var(--bg-primary);
-        }
-        
-        .years-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        
-        .year-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            padding: 40px;
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .year-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--border-hover);
-            box-shadow: 0 30px 60px var(--shadow-color);
-        }
-        
-        .year-number {
-            font-size: 48px;
-            font-weight: 800;
+        .no-results i {
+            font-size: 60px;
             color: var(--primary);
             margin-bottom: 20px;
         }
         
-        .year-stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-        
-        .year-stat-item {
-            text-align: center;
-        }
-        
-        .year-stat-value {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 5px;
-        }
-        
-        .year-stat-label {
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-        
-        .table-section {
-            padding: 80px 60px;
-            background: var(--bg-primary);
-        }
-        
-        .table-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            overflow-x: auto;
-        }
-        
-        .stats-table {
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            overflow: hidden;
-            border-collapse: collapse;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-        
-        .stats-table th {
-            background: rgba(13, 110, 253, 0.2);
-            color: var(--primary);
-            font-weight: 600;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid rgba(13, 110, 253, 0.3);
-        }
-        
-        .stats-table td {
-            padding: 15px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--text-secondary);
-        }
-        
-        .stats-table tr:hover {
-            background: rgba(13, 110, 253, 0.1);
-        }
-        
-        .badge {
-            display: inline-block;
-            padding: 6px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-            color: white;
-        }
-        
-        .badge.new {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-        }
-        
-        .badge.used {
-            background: linear-gradient(135deg, #6c757d, #5a6268);
-        }
-        
-        .insights-section {
-            padding: 80px 60px;
-            background: var(--bg-primary);
-        }
-        
-        .insights-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
-        .insight-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            padding: 40px;
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .insight-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--border-hover);
-            box-shadow: 0 30px 60px var(--shadow-color);
-        }
-        
-        .insight-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(13, 110, 253, 0.1);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            border: 1px solid rgba(13, 110, 253, 0.3);
-        }
-        
-        .insight-icon i {
-            font-size: 32px;
-            color: var(--primary);
-        }
-        
-        .insight-card h3 {
-            font-size: 20px;
+        .no-results h3 {
+            font-size: 28px;
             margin-bottom: 15px;
             color: var(--text-primary);
         }
         
-        .insight-card p {
+        .no-results p {
             color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.7;
+        }
+        
+        .still-questions {
+            padding: 100px 60px;
+            background: var(--bg-primary);
+        }
+        
+        .questions-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 60px;
+            padding: 80px;
+            text-align: center;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .questions-icon {
+            width: 120px;
+            height: 120px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            border: 2px solid rgba(13, 110, 253, 0.3);
+            animation: pulseIcon 2s infinite;
+        }
+        
+        @keyframes pulseIcon {
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 30px var(--primary-glow);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 50px var(--primary-glow);
+            }
+        }
+        
+        .questions-icon i {
+            font-size: 60px;
+            color: var(--primary);
+        }
+        
+        .questions-container h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .questions-container p {
+            color: var(--text-secondary);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .questions-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .contact-btn.primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px var(--primary-glow);
+        }
+        
+        .contact-btn.whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        
+        .contact-btn.whatsapp:hover {
+            background: #128c7e;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
         }
         
         .notification {
@@ -780,13 +659,6 @@
             font-size: 14px;
         }
         
-        @media (max-width: 1200px) {
-            .stats-grid,
-            .insights-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
         @media (max-width: 768px) {
             .header {
                 padding: 15px 30px;
@@ -800,28 +672,19 @@
                 height: 50px;
                 margin-bottom: 5px;
             }
-            .stats-grid,
-            .years-grid,
-            .insights-grid {
-                grid-template-columns: 1fr;
-            }
-            .brands-chart {
-                padding: 30px;
-            }
-            .brand-item {
+            .search-box {
                 flex-direction: column;
-                text-align: center;
+                background: transparent;
+                gap: 10px;
             }
-            .brand-name {
-                min-width: auto;
+            .search-box button {
+                padding: 15px;
             }
-            .brand-count {
-                min-width: auto;
-                text-align: center;
+            .questions-container {
+                padding: 40px 20px;
             }
-            .year-stats {
-                flex-direction: column;
-                gap: 20px;
+            .questions-container h2 {
+                font-size: 32px;
             }
             .footer-content {
                 grid-template-columns: 1fr;
@@ -829,134 +692,114 @@
             }
         }
         
-        [data-theme="light"] .hero-title span,
-        [data-theme="light"] .stat-number {
+        [data-theme="light"] .hero-title span {
             background: linear-gradient(135deg, #1a1a1a, var(--primary)) !important;
             -webkit-background-clip: text !important;
             background-clip: text !important;
         }
         
+        [data-theme="light"] .category-btn.active,
         [data-theme="light"] .nav-btn.active {
             color: white !important;
         }
         
-        [data-theme="light"] .stat-percent {
-            color: var(--primary) !important;
+        [data-theme="light"] .faq-answer {
+            background: rgba(0, 0, 0, 0.02) !important;
         }
     </style>
 </head>
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo-link">
-            <img src="assets/images/logo-main-dark.png" alt="CAR WORLD Logo" class="logo logo-dark">
-            <img src="assets/images/logo-main-light.png" alt="CAR WORLD Logo" class="logo logo-light" style="display: none;">
+        <a href="/CF/index.html" class="logo-link">
+            <img src="/CF/assets/images/logo-main-dark.png" alt="CAR WORLD Logo" class="logo logo-dark">
+            <img src="/CF/assets/images/logo-main-light.png" alt="CAR WORLD Logo" class="logo logo-light" style="display: none;">
         </a>
         <nav class="nav">
-            <a href="index.html" class="nav-btn">الرئيسية</a>
-            <a href="cars.html" class="nav-btn">السيارات</a>
-            <a href="stats.html" class="nav-btn active">إحصائيات</a>
-            <a href="about.html" class="nav-btn">من نحن ؟</a>
-            <a href="contact.html" class="nav-btn">اتصال</a>
-            <a href="faq.html" class="nav-btn">FAQ</a>
-            <a href="terms.html" class="nav-btn">الشروط</a>
+            <a href="/CF/index.html" class="nav-btn">الرئيسية</a>
+            <a href="/CF/cars.html" class="nav-btn">السيارات</a>
+            <a href="/CF/stats.html" class="nav-btn">إحصائيات</a>
+            <a href="/CF/about.html" class="nav-btn">من نحن ؟</a>
+            <a href="/CF/contact.html" class="nav-btn">اتصال</a>
+            <a href="/CF/faq.html" class="nav-btn active">FAQ</a>
+            <a href="/CF/terms.html" class="nav-btn">الشروط</a>
         </nav>
     </header>
 
     <main>
-        <section class="stats-hero">
+        <section class="faq-hero">
             <div class="hero-content">
-                <div class="hero-badge">✦ البيانات تتحدث ✦</div>
+                <div class="hero-badge">✦ مركز المساعدة ✦</div>
                 <h1 class="hero-title">
-                    إحصائيات<br>
-                    <span>Car World</span>
+                    الأسئلة<br>
+                    <span>الشائعة</span>
                 </h1>
                 <p class="hero-description">
-                    نظرة شاملة على منصتنا وأعداد السيارات المتاحة حسب الماركات والدول والسنوات. أرقام دقيقة وتحليلات مفصلة.
+                    كل ما تحتاج معرفته عن خدماتنا في مكان واحد. ابحث عن إجابة لسؤالك أو تصفح الفئات المختلفة.
                 </p>
             </div>
         </section>
 
-        <section class="main-stats-section">
-            <div class="stats-container">
-                <div class="stats-grid" id="mainStats"></div>
-            </div>
-        </section>
-
-        <section class="countries-section">
-            <div class="section-header">
-                <h2>توزيع السيارات حسب الدول</h2>
-                <p>نظرة على أبرز الدول المصنعة للسيارات في منصتنا</p>
-            </div>
-            <div class="countries-grid" id="countriesStats"></div>
-        </section>
-
-        <section class="brands-section">
-            <div class="brands-container">
-                <div class="section-header">
-                    <h2>أكثر الماركات توفراً</h2>
-                    <p>ترتيب الماركات حسب عدد السيارات المتاحة</p>
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="faqSearch" placeholder="ابحث عن سؤال... (مثال: ضمان، تقسيط، شحن)">
+                    <button onclick="searchFAQ()">بحث</button>
                 </div>
-                <div class="brands-chart" id="brandsChart"></div>
             </div>
         </section>
 
-        <section class="years-section">
-            <div class="section-header">
-                <h2>توزيع السيارات حسب السنة</h2>
-                <p>مقارنة بين موديلات 2024 و 2025</p>
-            </div>
-            <div class="years-grid" id="yearsStats"></div>
-        </section>
-
-        <section class="table-section">
-            <div class="section-header">
-                <h2>جدول تفصيلي للسيارات</h2>
-                <p>قائمة كاملة بجميع السيارات المتاحة</p>
-            </div>
-            <div class="table-container">
-                <table class="stats-table" id="distributionTable">
-                    <thead>
-                        <tr>
-                            <th>التصنيف</th>
-                            <th>الماركة</th>
-                            <th>الموديل</th>
-                            <th>السنة</th>
-                            <th>الحالة</th>
-                            <th>الدولة</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody"></tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="insights-section">
-            <div class="section-header">
-                <h2>تحليلات وحقائق</h2>
-                <p>رؤى مهمة عن سوق السيارات في منصتنا</p>
-            </div>
-            <div class="insights-grid">
-                <div class="insight-card">
-                    <div class="insight-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>نمو السيارات الكهربائية</h3>
-                    <p>ارتفاع الطلب على السيارات الهجينة والكهربائية بنسبة 150% مقارنة بالعام الماضي</p>
+        <section class="categories-section">
+            <div class="categories-container">
+                <div class="categories-grid">
+                    <button class="category-btn active" onclick="filterFAQ('all', this)">
+                        <i class="fas fa-list"></i>
+                        الكل
+                    </button>
+                    <button class="category-btn" onclick="filterFAQ('شراء', this)">
+                        <i class="fas fa-shopping-cart"></i>
+                        الشراء
+                    </button>
+                    <button class="category-btn" onclick="filterFAQ('دفع', this)">
+                        <i class="fas fa-credit-card"></i>
+                        الدفع
+                    </button>
+                    <button class="category-btn" onclick="filterFAQ('ضمان', this)">
+                        <i class="fas fa-shield-alt"></i>
+                        الضمان
+                    </button>
+                    <button class="category-btn" onclick="filterFAQ('شحن', this)">
+                        <i class="fas fa-truck"></i>
+                        الشحن
+                    </button>
+                    <button class="category-btn" onclick="filterFAQ('صيانة', this)">
+                        <i class="fas fa-tools"></i>
+                        الصيانة
+                    </button>
                 </div>
-                <div class="insight-card">
-                    <div class="insight-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>أكثر الفئات طلباً</h3>
-                    <p>السيارات الفاخرة تستحوذ على 45% من إجمالي عمليات البحث</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq-grid" id="faqGrid"></div>
+            </div>
+        </section>
+
+        <section class="still-questions">
+            <div class="questions-container">
+                <div class="questions-icon">
+                    <i class="fas fa-question"></i>
                 </div>
-                <div class="insight-card">
-                    <div class="insight-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>أعلى كثافة بيع</h3>
-                    <p>القاهرة الكبرى والإسكندرية تمثل 60% من إجمالي المبيعات</p>
+                <h2>لم تجد إجابة لسؤالك؟</h2>
+                <p>فريق خدمة العملاء لدينا جاهز للإجابة على جميع استفساراتك على مدار الساعة</p>
+                <div class="questions-buttons">
+                    <a href="/CF/contact.html" class="contact-btn primary">
+                        <i class="fas fa-envelope"></i> تواصل معنا
+                    </a>
+                    <a href="https://wa.me/201033139027" class="contact-btn whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> واتساب
+                    </a>
                 </div>
             </div>
         </section>
@@ -982,10 +825,10 @@
             <div class="footer-section">
                 <h3>روابط سريعة</h3>
                 <ul>
-                    <li><a href="about.html">من نحن ؟</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
-                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
-                    <li><a href="terms.html">الشروط والأحكام</a></li>
+                    <li><a href="/CF/about.html">من نحن ؟</a></li>
+                    <li><a href="/CF/contact.html">اتصل بنا</a></li>
+                    <li><a href="/CF/faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="/CF/terms.html">الشروط والأحكام</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -1003,233 +846,255 @@
     </footer>
 
     <script>
-        function gatherStats() {
-            if (typeof cars === 'undefined') {
-                return {
-                    total: 60,
-                    new: 35,
-                    used: 25,
-                    brands: 15,
-                    countries: {
-                        'ألمانيا': 60
-                    },
-                    brandsData: {
-                        'BMW': 8,
-                        'Mercedes': 8,
-                        'Audi': 6,
-                        'Toyota': 7,
-                        'Hyundai': 7,
-                        'Kia': 7,
-                        'Honda': 4,
-                        'Nissan': 4,
-                        'Renault': 3,
-                        'Mazda': 3,
-                        'Lexus': 2,
-                        'Porsche': 2,
-                        'Volkswagen': 2,
-                        'Mitsubishi': 2,
-                        'Suzuki': 2
-                    },
-                    years: {
-                        '2024': 32,
-                        '2025': 28
-                    },
-                    tableRows: []
-                };
+        const faqData = [{
+            question: "كيف يمكنني شراء سيارة من Car World؟",
+            answer: `عملية الشراء سهلة جداً ومكونة من 4 خطوات بسيطة:
+                
+                1️⃣ تصفح السيارات المتاحة في قسم "السيارات" واستخدم الفلاتر للعثور على سيارتك المثالية.
+                2️⃣ اختر السيارة التي تناسبك واضغط على "تفاصيل" لقراءة المواصفات الكاملة.
+                3️⃣ اضغط على "شراء عبر واتساب" للتواصل المباشر مع فريق المبيعات.
+                4️⃣ أكمل إجراءات الشراء مع فريقنا المختص الذي سيرشدك خطوة بخطوة حتى استلام السيارة.
+                
+                نحن ندعمك في كل خطوة، من اختيار السيارة إلى التمويل والتأمين والتسليم.`,
+            category: "شراء"
+        }, {
+            question: "ما هي طرق الدفع المتاحة؟",
+            answer: `نوفر عدة طرق دفع مرنة لتناسب جميع العملاء:
+                
+                💵 الدفع النقدي: خصومات خاصة تصل إلى 7% على الدفع الكاش.
+                💳 التقسيط المرن: حتى 84 شهراً مع دفعة أولى تبدأ من 10% (بالتعاون مع كبرى البنوك المصرية).
+                💳 بطاقات الائتمان: نقبل جميع البطاقات (فيزا، ماستركارد).
+                🏦 التحويل البنكي: تحويل مباشر لحساباتنا في البنوك المصرية.
+                
+                يختلف نظام التقسيط حسب كل سيئة وفئة. يمكنك معرفة التفاصيل الدقيقة في صفحة السيارة.`,
+            category: "دفع"
+        }, {
+            question: "هل السيارات عليها ضمان؟",
+            answer: `نعم، جميع السيارات تأتي مع ضمانات مختلفة حسب نوع السيارة:
+                
+                🚗 السيارات الجديدة:
+                - ضمان الوكالة كامل (5 سنوات أو 100,000 كم - أيهما أقرب).
+                - ضمان إضافي مجاني للسنة الأولى على الصيانة الدورية.
+                
+                🔧 السيارات المستعملة:
+                - تخضع لفحص شامل مكون من 120 نقطة فحص.
+                - ضمان لمدة عام كامل ضد عيوب الصناعة الأساسية (المحرك، الجيربوكس، الكهرباء).
+                - بعض السيارات المستعملة قد يكون متبقي من ضمان الوكالة (نوضح ذلك في صفحة السيارة).
+                
+                جميع الضمانات معتمدة وموثقة.`,
+            category: "ضمان"
+        }, {
+            question: "كم تستغرق عملية الشحن والتسليم؟",
+            answer: `مدة الشحن تعتمد على موقعك الجغرافي:
+                
+                📍 القاهرة الكبرى: 1-2 يوم عمل (شحن مجاني).
+                📍 الإسكندرية: 2-3 أيام عمل (شحن مجاني).
+                📍 المحافظات القريبة (الغربية، المنوفية، البحيرة): 3-4 أيام عمل (1500 جنيه).
+                📍 المحافظات البعيدة (المنيا، أسيوط، سوهاج): 4-5 أيام عمل (2000 جنيه).
+                📍 حدود الجمهورية (الأقصر، أسوان، مطروح): 5-7 أيام عمل (3000 جنيه).
+                
+                نوفر خدمة التوصيل حتى باب المنزل مع معاينة السيارة قبل الاستلام.`,
+            category: "شحن"
+        }, {
+            question: "هل يمكنني تجربة قيادة السيارة قبل الشراء؟",
+            answer: `نعم، نوفر خدمة تجربة القيادة في مقرنا الرئيسي بالقاهرة الجديدة.
+                
+                📅 كيف تحجز موعداً؟
+                1. اختر السيارة التي ترغب بتجربتها.
+                2. اتصل بنا أو أرسل رسالة عبر واتساب.
+                3. حدد اليوم والوقت المناسبين لك.
+                
+                ننصح دائماً بتجربة القيادة قبل اتخاذ قرار الشراء النهائي. للمسافرين خارج القاهرة، يمكننا ترتيب معاينة عبر فيديو كول مفصلة مع شرح جميع مميزات السيارة.`,
+            category: "شراء"
+        }, {
+            question: "ما هي المستندات المطلوبة للتقسيط؟",
+            answer: `المستندات الأساسية المطلوبة:
+                
+                📄 صورة بطاقة الرقم القومي (سارية).
+                📄 إثبات دخل (إيصال مرتب حديث أو سجل تجاري للمشاريع الحرة).
+                📄 إيصال مرافق حديث (كهرباء أو غاز).
+                📄 مقدم الحجز (يختلف حسب السيارة وقيمة التمويل).
+                
+                قد تطلب البنوك مستندات إضافية حسب كل حالة (كشف حساب بنكي، ضامن...). فريقنا سيساعدك في تجهيز جميع الأوراق وسيوجهك خطوة بخطوة.`,
+            category: "دفع"
+        }, {
+            question: "هل تقومون بفحص السيارات المستعملة قبل البيع؟",
+            answer: `نعم، كل سيارة مستعملة في Car World تخضع لفحص شامل ومتكامل:
+                
+                🔍 نقاط الفحص (120 نقطة):
+                - فحص المحرك وناقل الحركة (الجيربوكس) - 30 نقطة.
+                - فحص الهيكل والشاصي - 20 نقطة.
+                - فحص الكهرباء والإلكترونيات - 25 نقطة.
+                - فحص التكييف والتبريد - 10 نقاط.
+                - فحص أنظمة الأمان (الفرامل، الوسائد الهوائية) - 15 نقطة.
+                - فحص الإطارات والتعليق - 10 نقاط.
+                - فحص الطلاء والداخلية - 10 نقاط.
+                
+                تحصل على تقرير فحص معتمد مع السيارة.`,
+            category: "ضمان"
+        }, {
+            question: "كيف تتم صيانة السيارة بعد الشراء؟",
+            answer: `نوفر خدمة ما بعد البيع عبر شركائنا من مراكز الصيانة المعتمدة:
+                
+                🔧 خدمات الصيانة:
+                - جدول صيانة دورية لكل سيارة (نذكرك بمواعيد الصيانة).
+                - شبكة مراكز صيانة معتمدة في جميع المحافظات.
+                - قطع غيار أصلية بأسعار مخفضة لعملاء Car World.
+                - خدمة عملاء للمتابعة بعد البيع.
+                - للسيارات الجديدة، الصيانة الأولى مجانية خلال أول 6 شهور.
+                
+                ننصح بعمل صيانة دورية كل 6 شهور أو 10,000 كم أيهما أقرب.`,
+            category: "صيانة"
+        }, {
+            question: "هل يمكن استبدال السيارة بعد الشراء؟",
+            answer: `نعم، نوفر خدمة استبدال السيارات ضمن شروط محددة:
+                
+                🔄 خلال أول 14 يوماً:
+                - يمكنك استبدال السيارة بسيارة أخرى مع دفع فرق السعر (إن وجد).
+                - يشترط أن تكون السيارة بحالتها الأصلية (عداد أقل من 500 كم).
+                
+                🔄 بعد 14 يوماً:
+                - يمكنك الاستفادة من خدمة إعادة الشراء (نشتري سيارتك بقيمة سوقية عادلة).
+                - أو استبدال سيارتك بسيارة أخرى من معرضنا مع دفع الفرق.
+                
+                تواصل مع فريق خدمة العملاء لمعرفة التفاصيل الكاملة.`,
+            category: "شراء"
+        }, {
+            question: "ما هي تكاليف الشحن للمحافظات؟",
+            answer: `رسوم الشحن مفصلة حسب المنطقة:
+                
+                🚚 المحافظات القريبة:
+                - الغربية، المنوفية، البحيرة: 1500 جنيه.
+                
+                🚚 المحافظات البعيدة:
+                - المنيا، أسيوط، سوهاج: 2000 جنيه.
+                
+                🚚 حدود الجمهورية:
+                - الأقصر، أسوان، مطروح: 3000 جنيه.
+                
+                ✨ الشحن مجاني داخل القاهرة الكبرى والإسكندرية.
+                
+                نوفر خدمة التوصيل حتى باب المنزل مع معاينة السيارة قبل الاستلام.`,
+            category: "شحن"
+        }, {
+            question: "هل توفرون تمويل لجميع الفئات؟",
+            answer: `نعم، نتعامل مع جميع البنوك الكبرى في مصر لتوفير تمويل يناسب الجميع:
+                
+                👨‍💼 الموظفين:
+                - قطاع حكومي وقطاع خاص وبنوك.
+                - دفعة أولى تبدأ من 10%.
+                
+                👨‍🔧 الأعمال الحرة:
+                - أصحاب مهن حرة ومشاريع صغيرة.
+                - دفعة أولى تبدأ من 15%.
+                
+                👴 أصحاب المعاشات:
+                - برامج تمويل خاصة للمتقاعدين.
+                - دفعة أولى تبدأ من 20%.
+                
+                🏢 الشركات:
+                - تمويل أساطيل سيارات للشركات.
+                - شروط خاصة وخصومات للشركات.`,
+            category: "دفع"
+        }, {
+            question: "كم مرة يجب عمل صيانة دورية للسيارة؟",
+            answer: `للحفاظ على سيارتك بأفضل حالة، ننصح بالآتي:
+                
+                ⏰ الصيانة الدورية:
+                - كل 6 أشهر أو 10,000 كم أيهما أقرب (للسيارات الجديدة).
+                - كل 5,000 كم للسيارات المستعملة (لأقصى عمر للمحرك).
+                
+                ✅ ماذا تشمل الصيانة:
+                - تغيير زيت المحرك والفلتر.
+                - فحص فلتر الهواء وتغييره إذا لزم.
+                - فحص الفرامل (الفحمات، الأقراص).
+                - فحص الإطارات وضبط ضغط الهواء.
+                - فحص شامل لأنظمة السيارة (كهرباء، تبريد، تعليق).
+                
+                نشحن لك تذكير قبل موعد الصيانة. نقدم عروضاً خاصة لباقات الصيانة السنوية.`,
+            category: "صيانة"
+        }];
+
+        function displayFAQs(filterCategory = 'all', searchTerm = '') {
+            const grid = document.getElementById('faqGrid');
+            if (!grid) return;
+
+            let filteredFAQs = faqData;
+
+            if (filterCategory !== 'all') {
+                filteredFAQs = filteredFAQs.filter(faq => faq.category === filterCategory);
             }
 
-            let stats = {
-                total: 0,
-                new: 0,
-                used: 0,
-                brands: new Set(),
-                countries: {
-                    'ألمانيا': 0
-                },
-                brandsData: {},
-                years: {
-                    '2024': 0,
-                    '2025': 0
-                },
-                tableRows: []
-            };
-
-            for (let category in cars) {
-                for (let brand in cars[category]) {
-                    stats.brands.add(brand);
-
-                    if (!stats.brandsData[brand]) {
-                        stats.brandsData[brand] = 0;
-                    }
-
-                    for (let car of cars[category][brand]) {
-                        if (car.country !== 'ألمانيا') continue;
-
-                        stats.total++;
-                        stats.brandsData[brand]++;
-
-                        if (car.condition === 'new') stats.new++;
-                        else if (car.condition === 'used') stats.used++;
-
-                        if (stats.countries.hasOwnProperty(car.country)) {
-                            stats.countries[car.country]++;
-                        }
-
-                        if (stats.years.hasOwnProperty(car.year)) {
-                            stats.years[car.year]++;
-                        }
-
-                        stats.tableRows.push({
-                            category: category === 'luxury' ? 'فاخرة' : (category === 'medium' ? 'متوسطة' : 'اقتصادية'),
-                            brand: brand,
-                            model: car.model,
-                            year: car.year,
-                            condition: car.condition === 'new' ? 'جديد' : 'مستعمل',
-                            country: car.country
-                        });
-                    }
-                }
+            if (searchTerm) {
+                filteredFAQs = filteredFAQs.filter(faq =>
+                    faq.question.includes(searchTerm) ||
+                    faq.answer.includes(searchTerm)
+                );
             }
 
-            stats.brands = stats.brands.size;
-            return stats;
-        }
-
-        function displayStats() {
-            const stats = gatherStats();
-
-            const mainStats = document.getElementById('mainStats');
-            if (mainStats) {
-                mainStats.innerHTML = `
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-car"></i></div>
-                        <div class="stat-number">${stats.total}</div>
-                        <div class="stat-label">إجمالي السيارات</div>
-                        <div class="stat-percent">100%</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-tag"></i></div>
-                        <div class="stat-number">${stats.new}</div>
-                        <div class="stat-label">سيارات جديدة</div>
-                        <div class="stat-percent">${((stats.new/stats.total)*100).toFixed(1)}%</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-history"></i></div>
-                        <div class="stat-number">${stats.used}</div>
-                        <div class="stat-label">سيارات مستعملة</div>
-                        <div class="stat-percent">${((stats.used/stats.total)*100).toFixed(1)}%</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-trademark"></i></div>
-                        <div class="stat-number">${stats.brands}</div>
-                        <div class="stat-label">ماركة مختلفة</div>
-                        <div class="stat-percent">جميع الماركات</div>
-                    </div>
-                `;
-            }
-
-            const countriesStats = document.getElementById('countriesStats');
-            if (countriesStats) {
-                const countries = [{
-                    name: 'ألمانيا',
-                    flag: '🇩🇪',
-                    count: stats.countries['ألمانيا']
-                }];
-
-                countriesStats.innerHTML = countries.map(c => `
-                    <div class="country-card">
-                        <div class="country-flag">${c.flag}</div>
-                        <div class="country-name">${c.name}</div>
-                        <div class="country-number">${c.count}</div>
-                        <div class="country-percent">${((c.count/stats.total)*100).toFixed(1)}% من الإجمالي</div>
-                    </div>
-                `).join('');
-            }
-
-            const brandsChart = document.getElementById('brandsChart');
-            if (brandsChart) {
-                const sortedBrands = Object.entries(stats.brandsData)
-                    .sort((a, b) => b[1] - a[1])
-                    .slice(0, 10);
-
-                const maxCount = sortedBrands[0][1];
-
-                brandsChart.innerHTML = sortedBrands.map(([brand, count]) => {
-                    const percentage = (count / maxCount) * 100;
-                    return `
-                        <div class="brand-item">
-                            <div class="brand-name">${brand}</div>
-                            <div class="brand-bar-container">
-                                <div class="brand-bar" style="width: ${percentage}%">
-                                    ${count} سيارة
-                                </div>
-                            </div>
-                            <div class="brand-count">${count}</div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-            const yearsStats = document.getElementById('yearsStats');
-            if (yearsStats) {
-                yearsStats.innerHTML = `
-                    <div class="year-card">
-                        <div class="year-number">2024</div>
-                        <div class="year-stats">
-                            <div class="year-stat-item">
-                                <div class="year-stat-value">${stats.years['2024']}</div>
-                                <div class="year-stat-label">إجمالي</div>
-                            </div>
-                            <div class="year-stat-item">
-                                <div class="year-stat-value">${stats.tableRows.filter(r => r.year === 2024 && r.condition === 'جديد').length}</div>
-                                <div class="year-stat-label">جديد</div>
-                            </div>
-                            <div class="year-stat-item">
-                                <div class="year-stat-value">${stats.tableRows.filter(r => r.year === 2024 && r.condition === 'مستعمل').length}</div>
-                                <div class="year-stat-label">مستعمل</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="year-card">
-                        <div class="year-number">2025</div>
-                        <div class="year-stats">
-                            <div class="year-stat-item">
-                                <div class="year-stat-value">${stats.years['2025']}</div>
-                                <div class="year-stat-label">إجمالي</div>
-                            </div>
-                            <div class="year-stat-item">
-                                <div class="year-stat-value">${stats.tableRows.filter(r => r.year === 2025 && r.condition === 'جديد').length}</div>
-                                <div class="year-stat-label">جديد</div>
-                            </div>
-                            <div class="year-stat-item">
-                                <div class="year-stat-value">${stats.tableRows.filter(r => r.year === 2025 && r.condition === 'مستعمل').length}</div>
-                                <div class="year-stat-label">مستعمل</div>
-                            </div>
-                        </div>
+            if (filteredFAQs.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <h3>لا توجد نتائج للبحث</h3>
+                        <p>حاول بكلمات بحث مختلفة أو اختر تصنيف آخر</p>
                     </div>
                 `;
+                return;
             }
 
-            const tableBody = document.getElementById('tableBody');
-            if (tableBody) {
-                tableBody.innerHTML = stats.tableRows.slice(0, 20).map(row => `
-                    <tr>
-                        <td>${row.category}</td>
-                        <td>${row.brand}</td>
-                        <td>${row.model}</td>
-                        <td>${row.year}</td>
-                        <td><span class="badge ${row.condition === 'جديد' ? 'new' : 'used'}">${row.condition}</span></td>
-                        <td>${row.country}</td>
-                    </tr>
-                `).join('');
+            grid.innerHTML = filteredFAQs.map((faq, index) => `
+                <div class="faq-item" data-category="${faq.category}">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>${index + 1}. ${faq.question}</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>${faq.answer.replace(/\n/g, '<br>')}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            const firstFaq = document.querySelector('.faq-item');
+            if (firstFaq) {
+                firstFaq.classList.add('active');
             }
         }
+
+        window.toggleFAQ = function(element) {
+            const faqItem = element.closest('.faq-item');
+            faqItem.classList.toggle('active');
+        };
+
+        window.filterFAQ = function(category, btn) {
+            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            displayFAQs(category, document.getElementById('faqSearch').value);
+        };
+
+        window.searchFAQ = function() {
+            const searchTerm = document.getElementById('faqSearch').value.trim();
+            const activeCategoryBtn = document.querySelector('.category-btn.active');
+            let category = 'all';
+
+            if (activeCategoryBtn && activeCategoryBtn.innerText !== 'الكل') {
+                category = activeCategoryBtn.innerText.replace(/[✦🔧💰🛒🚚🔨]/g, '').trim();
+            }
+
+            displayFAQs(category, searchTerm);
+        };
 
         document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(displayStats, 100);
+            displayFAQs();
+
+            document.getElementById('faqSearch').addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    searchFAQ();
+                }
+            });
         });
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
+            navigator.serviceWorker.register('/CF/sw.js')
                 .then(() => console.log('Service Worker registered!'));
         }
     </script>
