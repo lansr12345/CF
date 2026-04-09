@@ -1,4 +1,4 @@
-const CACHE_NAME = 'carworld-v2';
+const CACHE_NAME = 'carworld-v4';
 const urlsToCache = [
   '/CF/',
   '/CF/index.html',
@@ -8,23 +8,26 @@ const urlsToCache = [
   '/CF/faq.html',
   '/CF/terms.html',
   '/CF/stats.html',
+  '/CF/car-details.html',
   '/CF/script.js',
   '/CF/responsive.css',
   '/CF/manifest.json',
+  '/CF/icons/icon-72.png',
+  '/CF/icons/icon-96.png',
   '/CF/icons/android-chrome-192x192.png',
   '/CF/icons/android-chrome-512x512.png'
 ];
 
-// تثبيت الـ Service Worker وتخزين الملفات الأساسية
+// تثبيت الـ Service Worker وتخزين الملفات
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
-      .then(() => self.skipWaiting()) // تفعيل الـ SW فوراً
+      .then(() => self.skipWaiting())
   );
 });
 
-// حذف الكاش القديم عند تفعيل SW جديد
+// تفعيل وحذف الكاش القديم
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -35,30 +38,14 @@ self.addEventListener('activate', event => {
           }
         })
       );
-    }).then(() => self.clients.claim()) // يتحكم في الصفحات المفتوحة حالياً
+    }).then(() => self.clients.claim())
   );
 });
 
-// استراتيجية: cache-first ثم network (للملفات الثابتة)
+// استراتيجية: من الكاش أولاً ثم الشبكة
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
-      .then(response => {
-        // إرجاع الملف من الكاش إذا وُجد
-        if (response) {
-          return response;
-        }
-        // وإلا جلب من الشبكة وتخزين نسخة للاستخدام المستقبلي
-        return fetch(event.request).then(networkResponse => {
-          // نُخزّن فقط الردود الصالحة (status 200) من نفس النطاق
-          if (networkResponse && networkResponse.status === 200 && event.request.url.startsWith(self.location.origin)) {
-            const responseClone = networkResponse.clone();
-            caches.open(CACHE_NAME).then(cache => {
-              cache.put(event.request, responseClone);
-            });
-          }
-          return networkResponse;
-        });
-      })
+      .then(response => response || fetch(event.request))
   );
 });
