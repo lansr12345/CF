@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="XYZ1234567890" />
+    <meta name="description" content="أكبر منصة لبيع وشراء السيارات في مصر. اكتشف مجموعتنا الضخمة من السيارات الجديدة والمستعملة بأفضل الأسعار.">
+    <meta name="keywords" content="سيارات, شراء سيارات, بيع سيارات, سيارات جديدة, سيارات مستعملة, BMW, مرسيدس, أودي, تويوتا, هيونداي, كيا, تقسيط سيارات, مصر, القاهرة, Car World">
     <title>Car World - الرئيسية | منصة السيارات الرقمية</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0d6efd">
 
-    <!-- Fonts & Icons -->
-        <link rel="icon" type="image/x-icon" href="/CF/icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/CF/icons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/CF/icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/CF/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/CF/icons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/CF/icons/android-chrome-512x512.png">
-    <link rel="manifest" href="/CF/site.webmanifest">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/CF/sitemap.xml">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +34,7 @@
             box-sizing: border-box;
         }
         
-        :root {
+         :root {
             --primary: #0d6efd;
             --primary-dark: #0b5ed7;
             --primary-light: #3d8bfd;
@@ -900,11 +902,11 @@
                 header.style.transform = 'translateY(0)';
             }
             lastScroll = currentScroll;
-        });        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
+        });
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
                 .then(() => console.log('Service Worker registered!'));
         }
-
     </script>
 </body>
 
