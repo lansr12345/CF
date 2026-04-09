@@ -6,6 +6,7 @@ const urlsToCache = [
     '/CF/icons/icon-512.png'
 ];
 
+// تثبيت الـ Service Worker
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -13,6 +14,7 @@ self.addEventListener('install', event => {
     );
 });
 
+// تخزين الملفات أول بأول
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
