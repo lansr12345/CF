@@ -1,4 +1,4 @@
- const CACHE_NAME = 'carworld-cache-v1';
+  const CACHE_NAME = 'carworld-cache-v1';
 const urlsToCache = [
     '/CF/',
     '/CF/index.html',
