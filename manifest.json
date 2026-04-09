@@ -1,13 +1,23 @@
 {
   "name": "Car World",
   "short_name": "CW",
-  "description": "منصة لبيع وشراء السيارات الجديدة والمستعملة في مصر، أفضل الأسعار والضمان",
+  "description": "منصة لبيع وشراء السيارات الجديدة والمستعملة في مصر",
   "start_url": "/CF/index.html",
   "scope": "/CF/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#0d6efd",
   "icons": [
+    {
+      "src": "/CF/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/CF/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
     {
       "src": "/CF/icons/android-chrome-192x192.png",
       "sizes": "192x192",
